@@ -3,7 +3,7 @@
 - The user authorized a new independent repository for the overall project framework, README and later group collaboration.
 - Current scope is framework and documentation. Do not launch experiments, spend API credits, invent results or copy old experimental conclusions into this repository unless the user asks.
 - Focus on task 2: LLM agents across CivRealm tasks, failure/behavior diagnosis, targeted improvements and independent evaluation. The user selected five normal-difficulty tasks: two development, two battle and one diplomacy. Do not add RL-based training or comparisons to the current scope.
-- The five proposed task names and the 20-development/50-test instance counts are recommendations, not a frozen experiment. Initial runtime limits belong in docs/llm_study_design.md and must be settled on development instances before independent evaluation.
+- The user wants broad first-stage diagnosis before proposing improvements. Recommend 100 diagnosis instances per task, reuse a 20-instance subset for iterative development, and reserve 50 independent test instances per task; these counts and the five proposed task names are not frozen. Initial runtime limits belong in docs/llm_study_design.md and must be settled before collecting a consistent baseline diagnosis set and before independent evaluation.
 - Discuss the overall framework first. Any work division belongs at the end of the main README and remains unassigned until the group decides.
 - Keep the prior `civilization` workspace unchanged. This repository is independent.
 - Follow the user's scope limits: fix actual issues, avoid speculative defenses, extra wrappers, checksum files and unnecessary tests. Before a check, identify the failure it detects and the action it changes.
