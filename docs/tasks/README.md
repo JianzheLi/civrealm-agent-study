@@ -1,6 +1,8 @@
 # 任务说明
 
-确定一个任务后，为其创建以官方 task_type 命名的 Markdown 文件。首轮候选为建城、古代陆战和科技交易；最终选择由整体实验设计决定。
+确定一个任务后，为其创建以官方 task_type 命名的 Markdown 文件。范围已确定为两个发展、两个战斗和一个外交任务，全部 normal，当前仅研究 LLM Agent。
+
+建议任务为 `development_build_city`、`development_transport`、`battle_ancient_era`、`battle_defend_city` 与 `diplomacy_trade_tech`。具体名称尚未冻结，选择依据及运行设置见 [../llm_study_design.md](../llm_study_design.md)。
 
 一份任务说明需要交代：
 

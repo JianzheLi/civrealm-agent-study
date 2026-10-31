@@ -4,7 +4,7 @@
 
 本项目面向认知推理课程任务二。我们在 CivRealm 的不同小游戏中运行同一个 DeepSeek Agent，保存观察、决策、真实动作与环境反馈，分析失败的具体原因和反复出现的行为模式，再设计有针对性的改进，并在独立实例上检验效果。
 
-**当前阶段：研究框架与协作接口设计。** 本仓库目前只有文档和目录约定，尚未提供可运行的 Agent 或实验结果。任务最终选择、样本量和具体改进方法在正式采样前确定。
+**当前阶段：研究框架与协作接口设计。** 已确定只研究 LLM Agent，选择两个发展、两个战斗和一个外交任务，全部使用 normal 难度。本仓库目前只有文档和目录约定，尚未提供可运行的 Agent 或实验结果。具体任务名称、场景数量和运行上限仍为建议，正式测试前冻结。
 
 ## 1. 我们要回答什么
 
@@ -14,7 +14,7 @@
 2. 哪些失败来自输出和执行接口，哪些来自目标理解、状态利用或行动安排？哪些行为模式在多个任务中重复出现？
 3. 根据轨迹诊断提出的改进，能否在新实例上提高任务完成率？改善是否伴随额外的调用、动作或费用？
 
-研究对象首先是 **LLM Agent 的决策管线**。默认使用 DeepSeek 推理接口，不训练或微调基座模型。PPO、简单规则等可作为补充参照，不要求为每个新任务重新训练 RL 模型。
+研究对象是 **LLM Agent 的决策管线**。默认使用 DeepSeek 推理接口，不训练或微调基座模型。当前比较同一模型的基础版与改进版，只开展 LLM 实验。
 
 ## 2. 整体研究流程
 
@@ -38,15 +38,17 @@ flowchart LR
 
 ## 3. 任务范围怎么选
 
-先用少量、机制有区别的官方小游戏建立完整流程。建议从下面三类中确定首轮任务，数量和难度仍可调整。
+任务范围为 **2 个发展 + 2 个战斗 + 1 个外交，全部 normal**。建议选择以下五项；具体名称尚待确定。
 
 | 候选任务 | 官方类型 | 主要观察的行为 |
 | --- | --- | --- |
-| 建城选址 | `development_build_city` | 探索、比较位置、判断何时建城 |
-| 陆地战斗 | `battle_ancient_era` | 目标选择、移动与攻击安排、利用反馈调整行动 |
-| 科技交易 | `diplomacy_trade_tech` | 理解条款、提出交易、根据回应调整并执行条约 |
+| 发展：建城选址 | `development_build_city` | 探索、比较位置、判断何时建城 |
+| 发展：跨海建城 | `development_transport` | 多单位配合、装载、运输、登陆与建城的多阶段安排 |
+| 战斗：古代陆战 | `battle_ancient_era` | 目标选择、移动与攻击安排、利用反馈调整行动 |
+| 战斗：守城 | `battle_defend_city` | 防守目标、单位保护、回合推进与进攻风险的平衡 |
+| 外交：科技交易 | `diplomacy_trade_tech` | 理解条款、提出交易、根据回应调整并执行条约 |
 
-上述类型来自 [CivRealm 官方小游戏说明](https://bigai-ai.github.io/civrealm/advanced_materials/minigame_setting.html)。后续可加入基础设施建设或城市工作地块分配，首轮先控制任务数量。
+上述类型来自 [CivRealm 官方小游戏说明](https://bigai-ai.github.io/civrealm/advanced_materials/minigame_setting.html)。这组选择比较单阶段与多阶段发展、主动歼敌与限时防守，以及外交交互；它们是否产生相同失败模式，需要由轨迹检验。
 
 每个任务实施前都要写一份任务说明，明确：
 
@@ -113,7 +115,11 @@ flowchart LR
 
 先用小样本估算费用与每局长度，再固定正式样本量。默认沿用项目累计 **50 USD** 的 API 费用上限，实际实验统一记账。基础设施故障与策略失败分别保存，策略失败不为提高成功率而重跑。
 
-详细约定见 [docs/experiment_protocol.md](docs/experiment_protocol.md)。
+建议每个任务 **20 个开发场景 + 50 个独立测试场景**，共 350 个不同初始场景。开发集前 5 个用于试运行及费用估算，不另增加一套检查实例。两个版本各运行一次全部测试集，共 500 局正式比较；开发运行与消融另计。
+
+试运行初值为每局最多 **256 次环境动作、320 次模型调用**，每次请求最多 8,192 个生成 token。原生游戏回合限制保持场景规则。基础版与改进版在同一任务上使用相同预算；具体设置和样本量在开发阶段确定，不根据独立测试表现调整。
+
+样本量依据、模型参数、预算口径见 [docs/llm_study_design.md](docs/llm_study_design.md)，通用约定见 [docs/experiment_protocol.md](docs/experiment_protocol.md)。
 
 ## 8. 仓库结构
 
@@ -125,6 +131,7 @@ flowchart LR
 ├── docs/
 │   ├── interfaces.md            # 模块与日志接口
 │   ├── experiment_protocol.md   # 实验设计和记录约定
+│   ├── llm_study_design.md      # 五任务、场景数与运行参数建议
 │   └── tasks/                   # 每种任务的规则与评估说明
 ├── configs/                     # 后续保存实验配置与实例清单
 ├── prompts/                     # 后续保存基础版与改进版提示词
@@ -154,7 +161,7 @@ flowchart LR
 - [官方小游戏设计说明](https://bigai-ai.github.io/civrealm/advanced_materials/minigame_create.html)
 - [DeepSeek API 文档](https://api-docs.deepseek.com/)
 
-本版框架文档由 AI 编程助手协助整理；实验设计工作流参考 Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026), *Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents*, [arXiv:2609.00065](https://doi.org/10.48550/arXiv.2609.00065)。该引用用于说明文档工作流，不构成本项目的实验结论。
+本版框架文档由 AI 编程助手协助整理；实验设计与样本量规划工作流参考 Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026), *Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents*, [arXiv:2609.00065](https://doi.org/10.48550/arXiv.2609.00065)。该引用用于说明文档工作流，不构成本项目的实验结论。
 
 ## 11. 可能的分工（最后讨论）
 
