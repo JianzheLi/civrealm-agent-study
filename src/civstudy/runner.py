@@ -6,6 +6,7 @@ import subprocess
 import time
 from pathlib import Path
 from .common import ROOT, append_json, load_config, now, plain, read_jsonl, write_json
+from .openrouter import api_key
 from .env import action_menu, changes, language_state, make_env, native_status, snapshot
 
 INFRA = {'infrastructure_error', 'interrupted', 'running'}
@@ -159,8 +160,10 @@ def run_episode(config, task, instance, attempt_number, run_dir):
 
 def collect(task, config_path=None, limit=None, worker_index=0, workers=1):
     config = load_config(config_path)
-    if not os.environ.get('DEEPSEEK_API_KEY'):
-        raise SystemExit('DEEPSEEK_API_KEY is absent; no paid request or scene was started.')
+    try:
+        api_key(config)
+    except ValueError as error:
+        raise SystemExit(str(error)) from None
     run_dir = ROOT / 'runs' / config['run_id']
     run_dir.mkdir(parents=True, exist_ok=True)
     config['source_revision'] = json.loads((ROOT / 'runtime/source_revision.json').read_text())
@@ -172,8 +175,9 @@ def collect(task, config_path=None, limit=None, worker_index=0, workers=1):
             json.dump(dict(config, created_at=now()), f, ensure_ascii=False, indent=2)
     except FileExistsError:
         frozen = json.loads(run_manifest.read_text())
-        for key in ['model', 'max_tokens', 'reasoning_effort', 'top_p', 'max_env_steps', 'history_length', 'source_revision']:
-            if frozen[key] != config[key]:
+        for key in ['model', 'max_tokens', 'reasoning_effort', 'top_p', 'max_env_steps', 'history_length', 'source_revision',
+                    'api_provider', 'base_url', 'openrouter_provider', 'request_timeout_s']:
+            if frozen.get(key) != config.get(key):
                 raise SystemExit(f'Frozen run differs in {key}; use a distinct run_id.')
     manifest = json.loads((ROOT / config['manifest']).read_text())
     instances = manifest[task]['instance_ids'][:limit][worker_index::workers]

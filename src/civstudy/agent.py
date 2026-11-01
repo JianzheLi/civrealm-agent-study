@@ -1,10 +1,10 @@
 """Every actual request is journaled, including unusable final outputs."""
 import json
-import os
 import time
 from datetime import datetime, timezone
 from openai import OpenAI
 from .common import ROOT, append_json, now, plain
+from . import openrouter
 
 
 class OutputFailure(Exception):
@@ -26,6 +26,8 @@ def validate(content, action_count):
 
 
 def cost_estimate(usage, config, started):
+    if config.get('api_provider') == 'openrouter':
+        return openrouter.reported_cost(usage)
     if usage is None:
         return None, 'unknown'
     utc = datetime.fromtimestamp(started, timezone.utc)
@@ -44,7 +46,7 @@ def cost_estimate(usage, config, started):
 class Agent:
     def __init__(self, config, ledger, identity):
         self.config, self.ledger, self.identity = config, ledger, identity
-        self.client = OpenAI(api_key=os.environ['DEEPSEEK_API_KEY'], base_url=config['base_url'],
+        self.client = OpenAI(api_key=openrouter.api_key(config), base_url=config['base_url'],
                              timeout=config['request_timeout_s'], max_retries=0)
         self.system = (ROOT / 'prompts/baseline_v1.txt').read_text()
         self.calls = []
@@ -62,19 +64,31 @@ class Agent:
                         parameters={k: self.config[k] for k in ['max_tokens', 'reasoning_effort', 'top_p']},
                         content=None, usage=None, usage_unknown=True, cost_usd=None,
                         actual_model=None, finish_reason=None)
+            transport = openrouter.request_parameters(self.config)
+            if self.config.get('api_provider') == 'openrouter':
+                call.update(gateway='openrouter', base_url=self.config['base_url'])
+                call['parameters']['extra_body'] = plain(transport['extra_body'])
             try:
                 reply = self.client.chat.completions.create(
                     model=self.config['model'], messages=messages, top_p=self.config['top_p'],
-                    max_tokens=self.config['max_tokens'], reasoning_effort=self.config['reasoning_effort'],
-                    response_format={'type': 'json_object'}, extra_body={'thinking': {'type': 'enabled'}})
+                    max_tokens=self.config['max_tokens'],
+                    response_format={'type': 'json_object'}, **transport)
+                if self.config.get('api_provider') == 'openrouter':
+                    call.update(openrouter.response_metadata(reply))
+                    call['usage_unknown'] = call['usage'] is None
+                    call['cost_usd'], call['price_period'] = cost_estimate(call['usage'], self.config, started)
+                    openrouter.check_response(reply)
                 call.update(actual_model=reply.model, content=reply.choices[0].message.content or '',
                             finish_reason=reply.choices[0].finish_reason,
-                            usage=reply.usage.model_dump() if reply.usage else None)
+                            usage=call['usage'] if self.config.get('api_provider') == 'openrouter' else
+                                  reply.usage.model_dump() if reply.usage else None)
                 call['usage_unknown'] = call['usage'] is None
                 call['cost_usd'], call['price_period'] = cost_estimate(call['usage'], self.config, started)
             except BaseException as error:
                 # Error response bodies and headers are intentionally not persisted.
                 call.update(error_type=type(error).__name__, http_status=getattr(error, 'status_code', None))
+                if self.config.get('api_provider') == 'openrouter':
+                    call.update(openrouter.error_metadata(error))
                 raise
             finally:
                 call.update(latency_s=time.time() - started, ended_at=now())
