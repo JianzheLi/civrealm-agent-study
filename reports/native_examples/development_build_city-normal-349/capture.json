@@ -1,0 +1,67 @@
+{
+  "episode_id": "development_build_city-normal-349",
+  "source_run": "development-baseline-v5-20261101",
+  "source_trace": "/home/ubuntu/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_build_city-normal-349/attempt0",
+  "type": "native_freeciv_web_screenshots_of_recorded_action_reenactment",
+  "recorded_at": "2026-11-01T18:43:03.434547+00:00",
+  "source_stop_reason": "native_failure",
+  "source_success": false,
+  "model_requests": 0,
+  "frames": [
+    {
+      "path": "runs/native_examples_clean_20261102/development_build_city-normal-349/initial.png",
+      "caption": "RE-ENACTMENT | development_build_city-normal-349 | initial | action 0 | turn 1 | IN PROGRESS",
+      "native_map_scale": 2.2,
+      "dialogs_hidden": true,
+      "name": "initial",
+      "turn": 1,
+      "status": {
+        "native_game_status": 0,
+        "native_player_status": -1,
+        "mini_score": 5.6,
+        "mini_goal": 6.0,
+        "native_turn_limit": 30
+      }
+    },
+    {
+      "path": "runs/native_examples_clean_20261102/development_build_city-normal-349/process.png",
+      "caption": "RE-ENACTMENT | development_build_city-normal-349 | process | action 50 | turn 25 | IN PROGRESS",
+      "native_map_scale": 2.2,
+      "dialogs_hidden": true,
+      "name": "process",
+      "turn": 25,
+      "status": {
+        "native_game_status": 0,
+        "native_player_status": -1,
+        "mini_score": 5.6,
+        "mini_goal": 6.0,
+        "native_turn_limit": 30
+      }
+    },
+    {
+      "path": "runs/native_examples_clean_20261102/development_build_city-normal-349/final.png",
+      "caption": "RE-ENACTMENT | development_build_city-normal-349 | final | action 56 | turn 29 | FAILURE",
+      "native_map_scale": 2.2,
+      "dialogs_hidden": true,
+      "name": "final",
+      "turn": 29,
+      "status": {
+        "native_game_status": 1,
+        "native_player_status": 0,
+        "mini_score": 5.6,
+        "mini_goal": 6.0,
+        "native_turn_limit": 30
+      }
+    }
+  ],
+  "submitted_actions": 56,
+  "note": "New live UI demonstration from the recorded actions; not an original-run screen recording.",
+  "observer_player": "Minitask",
+  "native_game_status": 1,
+  "native_player_status": 0,
+  "mini_score": 5.6,
+  "mini_goal": 6.0,
+  "native_turn_limit": 30,
+  "success": false,
+  "source_outcome_agrees": true
+}

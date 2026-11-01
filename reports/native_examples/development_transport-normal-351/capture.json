@@ -1,0 +1,106 @@
+{
+  "episode_id": "development_transport-normal-351",
+  "source_run": "development-baseline-v5-20261101",
+  "source_trace": "/home/ubuntu/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-351/attempt0",
+  "type": "native_freeciv_web_screenshots_of_recorded_action_reenactment",
+  "recorded_at": "2026-11-01T18:55:14.911126+00:00",
+  "source_stop_reason": "native_failure",
+  "source_success": false,
+  "model_requests": 0,
+  "frames": [
+    {
+      "path": "runs/native_examples_camera_20261102/development_transport-normal-351/initial.png",
+      "caption": "RE-ENACTMENT | development_transport-normal-351 | initial | action 0 | turn 1 | IN PROGRESS",
+      "native_map_scale": 2.2,
+      "dialogs_hidden": true,
+      "presentation": {
+        "focusId": 111,
+        "focusTile": 82,
+        "playerId": 0,
+        "nativeClientState": 2
+      },
+      "name": "initial",
+      "turn": 1,
+      "status": {
+        "native_game_status": 0,
+        "native_player_status": -1,
+        "mini_score": 0,
+        "mini_goal": 1,
+        "native_turn_limit": 10
+      }
+    },
+    {
+      "path": "runs/native_examples_camera_20261102/development_transport-normal-351/process.png",
+      "caption": "RE-ENACTMENT | development_transport-normal-351 | process | action 8 | turn 3 | IN PROGRESS",
+      "native_map_scale": 2.2,
+      "dialogs_hidden": true,
+      "presentation": {
+        "focusId": 113,
+        "focusTile": 68,
+        "playerId": 0,
+        "nativeClientState": 2
+      },
+      "name": "process",
+      "turn": 3,
+      "status": {
+        "native_game_status": 0,
+        "native_player_status": -1,
+        "mini_score": 0,
+        "mini_goal": 1,
+        "native_turn_limit": 10
+      }
+    },
+    {
+      "path": "runs/native_examples_camera_20261102/development_transport-normal-351/before_terminal.png",
+      "caption": "RE-ENACTMENT | development_transport-normal-351 | before_terminal | action 24 | turn 9 | IN PROGRESS",
+      "native_map_scale": 2.2,
+      "dialogs_hidden": true,
+      "presentation": {
+        "focusId": null,
+        "focusTile": 82,
+        "playerId": 0,
+        "nativeClientState": 2
+      },
+      "name": "before_terminal",
+      "turn": 9,
+      "status": {
+        "native_game_status": 0,
+        "native_player_status": -1,
+        "mini_score": 0,
+        "mini_goal": 1,
+        "native_turn_limit": 10
+      }
+    },
+    {
+      "path": "runs/native_examples_camera_20261102/development_transport-normal-351/final.png",
+      "caption": "RE-ENACTMENT | development_transport-normal-351 | final | action 25 | turn 10 | FAILURE",
+      "native_map_scale": 2.2,
+      "dialogs_hidden": true,
+      "presentation": {
+        "focusId": null,
+        "focusTile": 82,
+        "playerId": 0,
+        "nativeClientState": 2
+      },
+      "name": "final",
+      "turn": 10,
+      "status": {
+        "native_game_status": 1,
+        "native_player_status": 0,
+        "mini_score": 0,
+        "mini_goal": 1,
+        "native_turn_limit": 10
+      }
+    }
+  ],
+  "submitted_actions": 25,
+  "note": "New live UI demonstration from the recorded actions; not an original-run screen recording.",
+  "observer_player": "Minitask",
+  "native_game_status": 1,
+  "native_player_status": 0,
+  "mini_score": 0,
+  "mini_goal": 1,
+  "native_turn_limit": 10,
+  "success": false,
+  "source_outcome_agrees": true
+}

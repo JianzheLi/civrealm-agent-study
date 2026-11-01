@@ -157,6 +157,8 @@ flowchart TD
 
 进一步的[失败机制分析与本地案例](reports/failure_diagnosis/README.md)保留了19个完整诊断案例，包括全部9个原生失败。可离线打开[案例浏览入口](reports/failure_diagnosis/index.html)查看回放与逐决策证据；大文件在 runs/local_review/，不进入Git。本轮仍按 thinking/high + 8K固定生成预算解释与统计。
 
+[原生游戏界面示例](reports/native_examples/README.md)提供建城与跨海的成功、失败截图：使用真实 Freeciv-web 界面，关闭弹窗并放大地图。图片是按已有动作重新演示时拍摄，用于说明任务与结局，不替代第一轮原始轨迹或统计结果。
+
 [课程报告正文与汇报提纲](reports/course_report/README.md)将上述结果整理为实验设置、结果分析、共同失败模式、讨论和结论，并附可直接使用的图表及证据入口。[失败共性分析](reports/course_report/失败共性分析.md)进一步对完整100局跨海追踪关键单位损失与恢复过程，以成功实例作对照。
 
 [固定8K的Agent改进方案](reports/course_report/固定8K的Agent改进方案.md)补充单局实际耗时及针对关键单位维护、恢复前提和反馈核对的后续设计。当前只整理方案，未修改基础Agent或启动新实验。

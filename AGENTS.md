@@ -17,6 +17,7 @@
 - All runnable commands and implementation claims must correspond to actual files. Shared implementation lives in src/civstudy; only the two development task specifications and collection are implemented in this request. The other members' tasks remain outside this execution.
 - No proactive subagents or unsolicited teammate messages/invitations.
 - On 2026-11-01 the user additionally authorized downloading the worthwhile representative raw trajectories and videos locally. The curated review subset lives under runs/local_review/ (outside Git), with explanations and portable browsing pages in reports/failure_diagnosis/. The user explicitly chose to retain the current thinking/high + 8192 generation budget and continue organizing existing results; do not change the collection configuration or launch a new experiment as part of this review.
+- On 2026-11-02 the user requested native Freeciv game screenshots for successful and failed examples. Recorded-action reenactments are authorized without new LLM requests; exact agreement with the original trajectory is not required. Keep them separate from formal results and identify them as new demonstrations. Close dialogs, enlarge the map, and show the final game state without success/failure popups. Native captures and provenance live in reports/native_examples/; source is src/civstudy/native_examples.py.
 
 ## Directory guide
 
