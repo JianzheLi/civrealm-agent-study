@@ -17,6 +17,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--task", required=True)
     parser.add_argument("--limit", type=int, help="New batches only; run the first N manifest IDs")
     parser.add_argument("--resume", metavar="BATCH_ID")
+    parser.add_argument("--workers", type=int, default=1)
     parser.add_argument("--max-env-steps", type=int)
     parser.add_argument(
         "--max-game-turns",
@@ -35,6 +36,10 @@ def main(argv: list[str] | None = None) -> int:
             resume_batch_id=args.resume,
             max_env_steps=args.max_env_steps,
             max_game_turns=args.max_game_turns,
+            workers=args.workers,
+            batch_ready=lambda batch_id, path: print(
+                f"batch_id: {batch_id}\nbatch_dir: {path}", flush=True
+            ),
         )
     except KeyboardInterrupt:
         print("\n[INTERRUPTED] Resume later with --resume BATCH_ID")

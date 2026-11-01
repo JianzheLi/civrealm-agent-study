@@ -1,8 +1,10 @@
 import csv
 from copy import deepcopy
 import json
+import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
+import time
 import unittest
 
 from civrealm_agent_study.batch import run_batch
@@ -27,6 +29,13 @@ def result_for(task_type, instance_id, attempt_number, stop_reason="native_succe
         "response_models": ["test-model"],
         "result_dir": f"result-{instance_id}-{attempt_number}",
     }
+
+
+def delayed_process_runner(bundle, repo_root, task_type, instance_id, **kwargs):
+    time.sleep(0.2)
+    result = result_for(task_type, instance_id, kwargs["attempt_number"])
+    result["worker_pid"] = os.getpid()
+    return result
 
 
 class BatchTests(unittest.TestCase):
@@ -68,6 +77,7 @@ class BatchTests(unittest.TestCase):
             with (batch_dir / "episode_results.csv").open(encoding="utf-8-sig") as handle:
                 rows = list(csv.DictReader(handle))
             self.assertEqual(len(rows), 2)
+            self.assertEqual([row["manifest_index"] for row in rows], ["0", "1"])
             self.assertEqual(json.loads((batch_dir / "batch_status.json").read_text())["remaining"], 0)
 
     def test_infrastructure_error_gets_next_attempt_on_resume(self):
@@ -104,6 +114,48 @@ class BatchTests(unittest.TestCase):
             self.assertEqual(completed["state"], "completed")
             self.assertEqual(attempts, [2])
             self.assertEqual(completed["attempts"], 2)
+
+    def test_multiple_workers_use_separate_processes(self):
+        with TemporaryDirectory() as temporary_directory:
+            bundle = self.make_bundle(temporary_directory)
+            status = run_batch(
+                bundle,
+                REPO_ROOT,
+                "battle_defend_city",
+                limit=4,
+                workers=2,
+                episode_runner=delayed_process_runner,
+            )
+            self.assertEqual(status["state"], "completed")
+            self.assertEqual(status["workers"], 2)
+            batch_dir = Path(temporary_directory, "batches", status["batch_id"])
+            results = [
+                json.loads(line)
+                for line in (batch_dir / "episode_results.jsonl")
+                .read_text(encoding="utf-8")
+                .splitlines()
+            ]
+            self.assertGreaterEqual(len({result["worker_pid"] for result in results}), 2)
+
+    def test_workers_must_match_when_resuming(self):
+        with TemporaryDirectory() as temporary_directory:
+            bundle = self.make_bundle(temporary_directory)
+            status = run_batch(
+                bundle,
+                REPO_ROOT,
+                "battle_defend_city",
+                limit=1,
+                episode_runner=delayed_process_runner,
+            )
+            with self.assertRaisesRegex(ValueError, "workers does not match"):
+                run_batch(
+                    bundle,
+                    REPO_ROOT,
+                    "battle_defend_city",
+                    resume_batch_id=status["batch_id"],
+                    workers=2,
+                    episode_runner=delayed_process_runner,
+                )
 
 
 if __name__ == "__main__":
