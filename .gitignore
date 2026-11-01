@@ -30,3 +30,6 @@ tmp/
 *.mp4
 *.webm
 *.zip
+# Local credentials and SSH private keys are never project artifacts.
+*.pem
+*.key

@@ -1,0 +1,36 @@
+{
+  "run_id": "development-history32-output16k-openrouter-20261101",
+  "method": "baseline_history32_output16k",
+  "observation_version": "visible_tech_compact_transport_native_events_v2",
+  "workers_per_task": 4,
+  "prompt_version": "baseline_v1",
+  "model_reference": "DeepSeek-V4.1-Flash-1017",
+  "model_verified_date": "2026-11-01",
+  "model_source": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "base_url": "https://openrouter.ai/api/v1",
+  "thinking": "enabled",
+  "reasoning_effort": "high",
+  "max_tokens": 16384,
+  "top_p": 1.0,
+  "request_timeout_s": 600,
+  "max_env_steps": 2000,
+  "max_api_calls": null,
+  "history_length": 32,
+  "infrastructure_retries": 1,
+  "tasks": [
+    "development_build_city",
+    "development_transport"
+  ],
+  "manifest": "configs/development_instances.json",
+  "task_specs": "configs/development_tasks.json",
+  "pricing": {
+    "source": "OpenRouter response usage.cost",
+    "method": "reported_per_request",
+    "missing_cost": "unknown"
+  },
+  "api_provider": "openrouter",
+  "openrouter_provider": {
+    "require_parameters": true
+  }
+}

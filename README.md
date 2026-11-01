@@ -95,6 +95,8 @@ flowchart TD
 
 上述设置用于新批次。可执行配置为 [development_history32_output16k.json](configs/development_history32_output16k.json)，采用独立 run_id；已有 `development.json`、默认启动入口和历史报告仍对应 4 条历史＋8K。启用方法及各任务配置规则见 [32 条历史＋16K 采集约定](docs/history32_output16k.md)。
 
+需要通过 OpenRouter 调用同一模型时，可选用 [OpenRouter 配置与说明](docs/openrouter.md)，凭据从 `OPENROUTER_API_KEY` 读取。该供应商配置使用 600 秒超时及独立 run_id，实际服务商和费用逐次记录。
+
 当前 thinking 模式忽略 temperature；固定 top_p 为 1.0，不宣称输出完全确定。[^deepseek-thinking] 生成参数和返回字段按官方接口记录。[^deepseek-api]
 
 原生终局优先。一次 env.step 提交计一个环境动作，结束回合也计一个；是否成功执行另记。聊天单独记条数。2,000 步仅用于结束同一回合反复操作等长循环，不因为重复几次就接管策略。非原生结束时保留原生未决状态与停止原因。
