@@ -83,3 +83,33 @@ map_conf reference lines: [110, 142, 216]
 211:   notify.event(nil, nil, E.SCRIPT, _(json_msg))
 212:   notify.event(nil, nil, E.SCRIPT, _(doc_msg))
 213: end
+
+Selected lookup checks for the native screenshot examples (researcher-side read).
+These four values were also present in the original player-visible final feedback.
+Source directory: /var/lib/tomcat10/webapps/data/savegames/minitask/
+minitask_T1_task_development_build_city_level_normal_id_93.sav:
+  game coordinate (7,5): map_conf[6][8] = 6.2; score_goal = 6.2; max_turn = 30.
+minitask_T1_task_development_build_city_level_normal_id_349.sav:
+  game coordinate (9,3): map_conf[4][10] = 5.6; score_goal = 6.0; max_turn = 30.
+Lua matrix indices are one-based; game coordinates are zero-based.
+
+Source: freeciv-web container, /var/lib/tomcat10/webapps/data/savegames/minitask/minitask_T1_task_development_transport_level_normal_id_580.sav
+The complete city_built callback sets success directly, without a continent check
+or mini_score assignment. The initialized mini_score therefore remains zero.
+
+173: function city_built_udf_callback(city)
+174:   if city.owner:is_human() then
+175:     used_turn = game.current_turn()
+176:     is_mini_success = 1
+177:     metrics_msg()
+178:     end_msg()
+179:   end
+180: end
+
+192: max_turn = 10
+194: mini_score = 0
+195: used_turn = 0
+196: is_mini_success = -1
+197: mini_goal = 1
+
+201: signal.connect('city_built', 'city_built_udf_callback')
