@@ -1,0 +1,41 @@
+{
+  "run_id": "development-history32-output16k-20261101",
+  "method": "baseline_history32_output16k",
+  "observation_version": "visible_tech_compact_transport_native_events_v2",
+  "workers_per_task": 4,
+  "prompt_version": "baseline_v1",
+  "model_reference": "DeepSeek-V4.1-Flash-1017",
+  "model_verified_date": "2026-11-01",
+  "model_source": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com",
+  "thinking": "enabled",
+  "reasoning_effort": "high",
+  "max_tokens": 16384,
+  "top_p": 1.0,
+  "request_timeout_s": 180,
+  "max_env_steps": 2000,
+  "max_api_calls": null,
+  "history_length": 32,
+  "infrastructure_retries": 1,
+  "tasks": [
+    "development_build_city",
+    "development_transport"
+  ],
+  "manifest": "configs/development_instances.json",
+  "task_specs": "configs/development_tasks.json",
+  "pricing": {
+    "source": "https://api-docs.deepseek.com/quick_start/pricing/",
+    "verified_date": "2026-11-01",
+    "peak": {
+      "input": 0.3,
+      "cached_input": 0.006,
+      "output": 1.2
+    },
+    "off_peak": {
+      "input": 0.15,
+      "cached_input": 0.003,
+      "output": 0.6
+    }
+  }
+}

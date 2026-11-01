@@ -14,6 +14,8 @@ python3 scripts/sync.py push
 
 ## 启动
 
+本页原有启动、监督和汇总命令仍针对 `development.json` 的 4 条历史＋8K 批次。新批次采用 32 条历史＋16K 时，使用 [独立配置与显式启动方法](history32_output16k.md)，不要把新结果写入旧 run_id 或覆盖已有报告。
+
 本地已设置 DEEPSEEK_API_KEY 时直接启动；否则终端隐藏输入：
 
 ```bash

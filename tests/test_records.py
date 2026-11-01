@@ -68,6 +68,39 @@ class RecordingTests(unittest.TestCase):
         self.assertEqual(result['stop_reason'],'native_success')
         self.assertEqual(result['env_steps'],1)
 
+    def test_history32_keeps_recent_actions_and_resets_between_episodes(self):
+        config = load_config('configs/development_history32_output16k.json')
+        config['max_env_steps'] = 35
+        contents = [json.dumps({'action_id':0, 'reason':f'action-{i}'}) for i in range(35)]
+        with tempfile.TemporaryDirectory() as name:
+            with patch.dict('os.environ',{'DEEPSEEK_API_KEY':'test-only'}), \
+                 patch('civstudy.agent.OpenAI', return_value=fake_client(contents)), \
+                 patch('civstudy.runner.make_env',return_value=(FakeEnv(),{},info())), \
+                 patch('civstudy.runner.language_state',return_value={'current_state_marker':'visible'}):
+                result = run_episode(config,'development_transport',580,0,Path(name))
+            steps = read_jsonl(Path(result['trace_path'])/'steps.jsonl')
+            calls = read_jsonl(Path(result['trace_path'])/'api_calls.jsonl')
+            self.assertEqual(result['env_steps'],35)
+            self.assertEqual([len(s['context']['history']) for s in steps],
+                             [min(i,32) for i in range(35)])
+            # All 35 actions use the same fake game turn: the window counts actions.
+            last = json.loads(calls[-1]['request_messages'][1]['content'])
+            self.assertEqual([h['reason'] for h in last['history']],
+                             [f'action-{i}' for i in range(2,34)])
+            self.assertEqual(last['state'],{'current_state_marker':'visible'})
+            self.assertEqual(last['legal_actions'],[{'id':0,'action_key':'END_TURN'}])
+            self.assertTrue(all(set(h)=={'native_action','reason','before_metrics',
+                'after_metrics','state_changes','turn','native_messages'} for h in last['history']))
+            self.assertTrue(all(c['parameters']['max_tokens']==16384 for c in calls))
+            config['max_env_steps'] = 1
+            with patch.dict('os.environ',{'DEEPSEEK_API_KEY':'test-only'}), \
+                 patch('civstudy.agent.OpenAI', return_value=fake_client(contents[:1])), \
+                 patch('civstudy.runner.make_env',return_value=(FakeEnv(),{},info())), \
+                 patch('civstudy.runner.language_state',return_value={}):
+                next_result = run_episode(config,'development_transport',581,0,Path(name))
+            next_calls = read_jsonl(Path(next_result['trace_path'])/'api_calls.jsonl')
+            self.assertEqual(json.loads(next_calls[0]['request_messages'][1]['content'])['history'],[])
+
     def test_step_limit_preserves_native_unknown(self):
         result, steps, calls = self.run_case(['{"action_id":0,"reason":"end"}']*2)
         self.assertEqual(result['stop_reason'],'step_limit')

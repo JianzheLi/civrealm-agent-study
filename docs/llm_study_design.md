@@ -44,10 +44,12 @@ _第一阶段数量已确定。两个发展任务已有实现，实际采集状�
 | reasoning_effort | `high` | 开发阶段若调整，正式比较版本统一使用新设置 |
 | temperature | 不传 | 当前 thinking 模式下该参数无效 |
 | top_p | `1.0` | 显式固定，但不宣称输出确定 |
-| max_tokens | `8192` | 单次生成上限；记录 length 等完成原因和实际用量 |
+| max_tokens | `16384`（新批次） | 单次生成上限；记录 length 等完成原因和实际用量 |
 | 最终输出 | JSON：action_id、简短 reason、可选 chat | 理由约 100 个中文字，不要求输出内部思维链 |
-| 基础历史 | 最近 4 次动作与反馈，每局清空 | 额外记忆或进展摘要作为方法变化说明 |
+| 基础历史 | 最近 32 次已执行且收到环境反馈的动作，每局清空 | 按动作而非游戏回合计数；额外记忆或进展摘要作为方法变化说明 |
 | 输入 | 统一任务规则、目标、玩家可见观察与事件、有序合法动作、近期历史及单局资源信息 | 不补入隐藏状态，不悄悄筛掉合法动作 |
+
+这组设置是独立的新批次条件，需显式选择 [新配置](../configs/development_history32_output16k.json)。旧 `development.json` 和已完成报告保持 4 条历史＋8K，不混合统计。当前局面和合法动作照常提供；历史保留动作、简短理由、前后指标、状态变化、回合号及通知，不重复放完整旧局面。输入没有新增 token 硬截断，也没有增加模型总结或反思。具体规则见 [采集约定](history32_output16k.md)。
 
 参数支持情况于 2026-11-01 核对 [thinking 文档](https://api-docs.deepseek.com/guides/thinking_mode/) 和 [Chat Completions 文档](https://api-docs.deepseek.com/api/create-chat-completion/)。如果开发实例中频繁因生成上限无法完成最终 JSON，先调整统一参数及费用估算，再正式采集；不只给失败测试局临时增加 token。
 
