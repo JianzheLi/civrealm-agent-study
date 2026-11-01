@@ -148,16 +148,21 @@ storage:
     - caches
 
 video:
-  required_for_pipeline_validation: true
+  purpose: presentation_evidence
+  required_for_pipeline_validation: false
   required_for_all_formal_episodes: false
-  evidence_ids_source: pipeline_validation_ids
-  capture_type: actual_gameplay
+  presentation_clips_per_task: 1
+  case_selection: after_trajectory_review
+  recommended_final_duration_minutes: 5
+  continuous_episode_recording_required: false
+  capture_type: actual_gameplay_highlights
   preferred_container: mkv
   remux_delivery_container: mp4
   record_microphone: false
   hide_credentials_and_private_windows: true
   metadata_index: video_index.csv
   checksum: sha256
+  edited_highlights_must_be_labeled: true
   replay_must_be_labeled: true
 
 budget:
