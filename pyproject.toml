@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "civrealm-agent-study"
+version = "0.1.0"
+description = "Shared baseline runner and evidence pipeline for the CivRealm agent study."
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+check-civrealm-study = "civrealm_agent_study.check_environment:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.unittest]
+start-directory = "tests"

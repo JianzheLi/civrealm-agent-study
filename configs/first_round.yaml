@@ -1,0 +1,167 @@
+schema_version: 1
+
+experiment:
+  name: first-round-baseline
+  config_id: first-round-baseline-v1-draft
+  status: development
+  difficulty: normal
+  methods:
+    - baseline
+  episodes_per_task: 100
+  freeze_before_collection: true
+
+tasks:
+  development_build_city:
+    owner: jianzheli
+  development_transport:
+    owner: jianzheli
+  battle_ancient_era:
+    owner: songluo
+    task_spec: docs/tasks/battle_ancient_era.md
+  battle_defend_city:
+    owner: songluo
+    task_spec: docs/tasks/battle_defend_city.md
+  diplomacy_trade_tech:
+    owner: beibeideng
+
+model:
+  provider: deepseek
+  api_base_url: https://api.deepseek.com
+  api_key_env: DEEPSEEK_API_KEY
+  request_model: deepseek-flash
+  reference_model: DeepSeek-V4.1-Flash-1017
+  reference_model_checked_on: 2026-11-01
+  record_response_model: true
+  thinking: enabled
+  reasoning_effort: high
+  top_p: 1.0
+  temperature: null
+  max_tokens: 8192
+
+agent:
+  prompt_path: prompts/baseline.md
+  correction_prompt_path: prompts/correction.md
+  prompt_version: baseline-v1-draft
+  observation_encoding: compact-deduplicated-v1
+  omit_empty_observation_fields: true
+  keep_full_mapping_in_trace: true
+  actor_schedule: first_unplanned_actor_in_environment_order
+  actor_schedule_resets_each_game_turn: true
+  recent_action_history: 4
+  reset_history_each_episode: true
+  output_format:
+    type: json
+    required_fields:
+      - action_id
+      - reason
+    optional_fields:
+      - expected_effect
+      - chat
+  max_output_corrections_per_decision: 1
+  fallback_action: null
+
+api:
+  request_timeout_seconds: 180
+  max_network_retries: 1
+  log_every_request_attempt: true
+  max_api_calls_per_episode: null
+
+pricing:
+  currency: USD
+  unit_tokens: 1000000
+  checked_on: 2026-11-01
+  source: https://api-docs.deepseek.com/quick_start/pricing/
+  deepseek_flash:
+    input_cache_hit:
+      off_peak: 0.003
+      peak: 0.006
+    input_cache_miss:
+      off_peak: 0.15
+      peak: 0.3
+    output:
+      off_peak: 0.6
+      peak: 1.2
+
+environment:
+  deployment_policy: local_per_member
+  player_builtin_ai: false
+  enemy_control: task_defined_ai
+  native_terminal_status_first: true
+  max_env_steps: 2000
+  required_provenance:
+    - platform
+    - python_version
+    - civrealm_commit
+    - civrealm_dirty
+    - freeciv_version
+    - deployment_type
+    - task_save_source
+  docker_provenance_when_used:
+    - docker_version
+    - image_reference
+    - image_id
+
+instances:
+  candidate_id_min: 0
+  candidate_id_max: 999
+  sample_without_replacement: true
+  explicit_manifest_required: true
+  selection_seed_is_not_game_seed: true
+  run_order_required: true
+  first_n_for_pipeline_validation: 5
+  validation_instances_count_toward_100: true
+
+logging:
+  run_manifest: required
+  step_records: required
+  api_call_records: required
+  episode_result: required
+  preserve_failed_attempts: true
+  usage_unknown_is_zero: false
+  stop_reasons:
+    - native_success
+    - native_failure
+    - output_failure
+    - execution_failure
+    - step_limit
+    - interrupted
+    - infrastructure_error
+
+storage:
+  run_root_env: CIVREALM_RUN_ROOT
+  raw_trajectories_in_git: false
+  credentials_in_git: false
+  git_artifacts:
+    - source
+    - configs
+    - prompts
+    - instance_manifests
+    - compact_episode_results
+    - annotations
+    - figures
+  local_artifacts:
+    - full_observations
+    - request_messages
+    - api_call_ledger
+    - savegames
+    - videos
+    - caches
+
+video:
+  required_for_pipeline_validation: true
+  required_for_all_formal_episodes: false
+  evidence_ids_source: pipeline_validation_ids
+  capture_type: actual_gameplay
+  preferred_container: mkv
+  remux_delivery_container: mp4
+  record_microphone: false
+  hide_credentials_and_private_windows: true
+  metadata_index: video_index.csv
+  checksum: sha256
+  replay_must_be_labeled: true
+
+budget:
+  currency: CNY
+  warning_amount_cny: null
+  stop_before_new_episode_amount_cny: null
+  never_interrupt_active_episode_for_budget: true

@@ -4,8 +4,8 @@
 
 - development_build_city：建城。
 - development_transport：跨海运输与建城。
-- battle_ancient_era：古代陆战。
-- battle_defend_city：守城。
+- [battle_ancient_era](battle_ancient_era.md)：古代陆战。
+- [battle_defend_city](battle_defend_city.md)：守城。
 - diplomacy_trade_tech：科技交易。
 
 从 [TEMPLATE.md](TEMPLATE.md) 复制内容，为每个任务创建以官方 task_type 命名的 Markdown 文件。模板已提供字段，但五份任务规则尚待依据真实实现填写。

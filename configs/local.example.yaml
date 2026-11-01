@@ -1,0 +1,35 @@
+schema_version: 1
+
+member: replace-me
+
+connection:
+  host: 127.0.0.1
+  client_port: null
+  allocate_port_automatically: true
+
+runtime:
+  platform: replace-me
+  python_executable: replace-me
+  python_version: replace-me
+  run_root: replace-me
+
+environment:
+  deployment_type: docker_local
+  civrealm_repo: replace-me
+  civrealm_commit: replace-me
+  civrealm_dirty: false
+  freeciv_version: null
+  task_save_source: replace-me
+  docker:
+    executable: null
+    version: null
+    image_reference: null
+    image_id: null
+    container_name: null
+
+credentials:
+  deepseek_api_key_env: DEEPSEEK_API_KEY
+
+video:
+  recorder: null
+  output_root: null

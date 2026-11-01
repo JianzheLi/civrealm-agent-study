@@ -28,3 +28,4 @@ tmp/
 *.mp4
 *.webm
 *.zip
+configs/local.yaml

@@ -4,7 +4,7 @@ _认知推理课程任务二：DeepSeek Agent 的跨任务诊断、失败案例�
 
 我们先在五种 CivRealm 小游戏中运行同一个 DeepSeek Agent，统计第一轮轨迹，找出跨任务共同的失败与行为模式；再根据证据提出改进，并在新场景上验证。
 
-**当前要做：五个任务、全部 normal，每任务 100 局，共 500 局第一轮轨迹；完成逐局统计、失败案例分析和可视化。** 本仓库目前提供框架与接口文档，尚未产出本轮轨迹、结果图或可运行入口。
+**当前要做：五个任务、全部 normal，每任务 100 局，共 500 局第一轮轨迹；完成逐局统计、失败案例分析和可视化。** 本仓库已提供环境检查、无 API smoke、单局 Agent 和可恢复批量运行入口；尚未产出完整首轮轨迹、结果图或正式结论。
 
 全组统一使用 DeepSeek 当前最新发布模型。2026-11-01 核对为 **DeepSeek-V4.1-Flash-1017**，API 名称 `deepseek-flash`。[^latest-model] 首轮开始前统一核对版本，记录实际返回标识与日期；发现服务版本变化时分批记录，不混成同一模型结果。
 
@@ -144,14 +144,15 @@ flowchart TD
 | [docs/first_round_analysis.md](docs/first_round_analysis.md) | 当前统计、失败案例与可视化的具体指南 |
 | [docs/experiment_protocol.md](docs/experiment_protocol.md) | 实例使用、异常和比较口径 |
 | [docs/llm_study_design.md](docs/llm_study_design.md) | 模型与运行设置 |
-| [configs/](configs/README.md) | 后续真实配置和实例清单 |
+| [docs/implementation_plan.md](docs/implementation_plan.md) | 完整目录、模块职责和分阶段验收计划 |
+| [configs/](configs/README.md) | 共享配置、本机模板和实例清单 |
 | [prompts/](prompts/README.md) | 统一基础提示词和后续方法版本 |
-| [src/](src/README.md)、[scripts/](scripts/README.md) | 待实现模块与真实运行入口 |
+| [src/](src/README.md)、[scripts/](scripts/README.md) | 已实现的环境、Agent、单局与可恢复批量运行入口 |
 | [reports/](reports/README.md) | 精简统计表、标签、案例、图表与报告 |
 
 源码、配置、实例清单和精简交付物进入 Git；完整观察、存档、轨迹、视频和缓存留在服务器。密钥通过 DEEPSEEK_API_KEY 环境变量读取。
 
-当前没有可运行入口。实现后同步补上依赖、命令和真实输出位置；不把示意文件名写成已经生成的实验结果。协作方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+当前入口及输出结构见 [scripts/README.md](scripts/README.md)。批量统计、失败标签和绘图尚待首轮数据产生后实现；不把示意文件名写成已经生成的实验结果。协作方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 9. 📚 参考资料与文档说明
 
