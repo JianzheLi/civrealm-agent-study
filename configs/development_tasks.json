@@ -1,0 +1,14 @@
+{
+  "development_build_city": {
+    "objective": "Use the settler to choose a resource-rich location and found a city meeting the native mini_goal before the native turn deadline. Founding a city ends the task, including when its score is below the goal. mini_score before settlement describes the current settler-tile candidate score. Movement consumes movement points; END_TURN replenishes movement according to native rules. Use only known terrain and current legal actions.",
+    "rules_source": "/var/lib/tomcat10/webapps/data/savegames/minitask/minitask_T1_task_development_build_city_level_normal_id_754.sav:[script]",
+    "success_definition": "Native success/is_mini_success == 1; city-built callback compares its native map score to score_goal with tolerance 0.0001. Do not expose map_conf to the agent.",
+    "native_turn_limit": "Read max_turn from each episode; inspected normal save has 30."
+  },
+  "development_transport": {
+    "objective": "Use settlers and galleons to travel to new land and found a city before the native turn deadline. A land unit can board an eligible same-tile ship in a city; adjacent embark actions board a specified ship. Transport the settler by moving its carrier, and use a legal directional disembark action to land. Generic deboard/unload actions require a city and are not interchangeable with landing on an empty shore. Follow current action availability and movement feedback. Native success is set by the human city-built event, independently of mini_score; verify the intended transport sequence from the observed state.",
+    "rules_source": "/var/lib/tomcat10/webapps/data/savegames/minitask/minitask_T1_task_development_transport_level_normal_id_580.sav:[script]; civrealm/freeciv/units/unit_actions.py",
+    "success_definition": "Native success/is_mini_success == 1; Lua human city_built callback sets success directly. mini_score can remain 0 with mini_goal 1. Lua does not independently verify a continent change.",
+    "native_turn_limit": "Read max_turn from each episode; inspected normal save has 10."
+  }
+}

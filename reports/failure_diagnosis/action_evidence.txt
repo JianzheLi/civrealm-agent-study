@@ -1,0 +1,66 @@
+Source: /home/ubuntu/jianzheli/University/conginitve_reasoning/civrealm-agent-study/third_party/civrealm/src/civrealm/freeciv/units/unit_actions.py
+ActPlant and ActBuildCity are different native actions.
+
+684: class ActPlant(EngineerAction):
+685:     """Action to create forest"""
+686:     action_key = fc_types.ACTIVITY_ACTION_MAP[fc_types.ACTIVITY_PLANT]
+687: 
+688:     def is_eng_action_valid(self):
+689:         if not self.utype_can_do_action(self.focus.punit, fc_types.ACTION_PLANT):
+690:             return False
+691: 
+692:         # Is already performing plant, no need to show this action again.
+693:         if self.focus.punit['activity'] == fc_types.ACTIVITY_PLANT:
+694:             return False
+695: 
+696:         # terr_name = self.focus.rule_ctrl.tile_terrain(self.focus.ptile)['name']
+697:         # # Forest can only be planted on grassland or plains
+698:         # return terr_name == "Grassland" or terr_name == "Plains"
+699:         # return action_prob_possible(self.focus.action_prob[map_const.DIR8_STAY][fc_types.ACTION_PLANT])
+700:         return self.focus.pterrain['plant_time'] > 0
+701: 
+702:     def _eng_packet(self):
+703:         return self._request_new_unit_activity(fc_types.ACTIVITY_PLANT, EXTRA_NONE)
+887: class ActBuildCity(UnitAction):
+888:     """Request that a city is built."""
+889:     action_key = "build_city"
+890: 
+891:     def __init__(self, cur_focus):
+892:         super().__init__(cur_focus)
+893:         self.next_city_name = None
+894: 
+895:     def is_action_valid(self):
+896:         if self.focus.punit['movesleft'] == 0:
+897:             # raise Exception("Unit has no moves left to build city")
+898:             return False
+899: 
+900:         # Check whether the unit type can do the given action
+901:         if not self.utype_can_do_action(self.focus.punit, fc_types.ACTION_FOUND_CITY):
+902:             return False
+903:         # if self.focus.ptype["name"] not in ["Settlers", "Engineers"]:
+904:             # return False
+905:         # target_city = self.focus.pcity
+906:         # # Already has a city, cannot build
+907:         # if target_city != None:
+908:         #     return False
+909: 
+910:         # _map = self.focus.map_ctrl
+911:         # unit_tile = _map.index_to_tile(self.focus.punit["tile"])
+912:         # unit_owner = self.focus.punit['owner']
+913:         # for city_id in self.focus.unit_ctrl.city_ctrl.cities.keys():
+914:         #     pcity = self.focus.unit_ctrl.city_ctrl.cities[city_id]
+915:         #     city_tile = _map.index_to_tile(pcity["tile"])
+916:         #     if city_tile['owner'] != unit_owner:
+917:         #         # If settler is on a foreign territory
+918:         #         return False
+919:         #     dx, dy = _map.map_distance_vector(unit_tile, city_tile)
+920:         #     dist = _map.map_vector_to_sq_distance(dx, dy)
+921:         #     if dist < pcity["city_radius_sq"]:
+922:         #         return False
+923:         return action_prob_possible(self.focus.action_prob[map_const.DIR8_STAY][fc_types.ACTION_FOUND_CITY])
+924: 
+925:     def _action_packet(self):
+926:         unit_id = self.focus.punit["id"]
+927:         self.wait_for_pid = None
+928:         if self.next_city_name is None:
+929:             packet = {"pid": fc_types.packet_city_name_suggestion_req,

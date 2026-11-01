@@ -1,0 +1,123 @@
+{
+  "run_id": "development-baseline-v5-20261101",
+  "downloaded_at": "2026-11-01T07:43:20.388939+00:00",
+  "case_count": 19,
+  "bytes": 952927442,
+  "cases": [
+    {
+      "episode_id": "development_build_city-normal-349",
+      "files": 63,
+      "bytes": 139550423,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-349/attempt0"
+    },
+    {
+      "episode_id": "development_build_city-normal-254",
+      "files": 22,
+      "bytes": 36102466,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-254/attempt0"
+    },
+    {
+      "episode_id": "development_build_city-normal-666",
+      "files": 8,
+      "bytes": 2846064,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0"
+    },
+    {
+      "episode_id": "development_build_city-normal-93",
+      "files": 14,
+      "bytes": 18092315,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0"
+    },
+    {
+      "episode_id": "development_build_city-normal-948",
+      "files": 58,
+      "bytes": 127215472,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-948/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-976",
+      "files": 18,
+      "bytes": 27882466,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-351",
+      "files": 32,
+      "bytes": 62944456,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-351/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-386",
+      "files": 25,
+      "bytes": 46991059,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-386/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-197",
+      "files": 44,
+      "bytes": 95520513,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-197/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-606",
+      "files": 23,
+      "bytes": 41993311,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-606/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-650",
+      "files": 33,
+      "bytes": 65801431,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-650/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-689",
+      "files": 35,
+      "bytes": 71053590,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-689/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-75",
+      "files": 25,
+      "bytes": 47175135,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-75/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-859",
+      "files": 32,
+      "bytes": 63087091,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-859/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-631",
+      "files": 15,
+      "bytes": 21371814,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-631/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-424",
+      "files": 38,
+      "bytes": 16427448,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-424/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-329",
+      "files": 18,
+      "bytes": 27474084,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-329/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-665",
+      "files": 17,
+      "bytes": 26128125,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-665/attempt0"
+    },
+    {
+      "episode_id": "development_transport-normal-999",
+      "files": 13,
+      "bytes": 15270179,
+      "local_trace_path": "/Users/jianzheli/Documents/University_LI/Grade4/Cognitive Reasoning/civrealm-agent-study/runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-999/attempt0"
+    }
+  ],
+  "verification": "Selected file counts and total bytes match remote inventory; no hashes used."
+}

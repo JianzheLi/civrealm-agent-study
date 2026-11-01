@@ -1,0 +1,18 @@
+{
+  "version": "observable_v2",
+  "definitions": {
+    "output_failure": "Two unusable final outputs; no replacement action",
+    "execution_failure": "Explicit native command rejection",
+    "native_terminal_unknown": "SDK terminated normally while native minitask verdict remained unknown",
+    "step_limit": "Reached 2000 submitted actions while native outcome unresolved",
+    "unchanged_action_repeat": "Same action and task-relevant state repeated consecutively; context review required",
+    "low_score_settlement": "Native failure immediately after choosing build_city with score below goal",
+    "native_deadline_reached": "Native failure at or after the recorded native turn deadline",
+    "transported_unit_no_longer_observed": "A carried own unit disappeared without an observed city creation; inspect native messages",
+    "success_without_loaded_ship_move": "Native success with no observed movement of a loaded ship",
+    "available_goal_settlement_deferred": "Goal met and build_city legal, but another action selected; context review required",
+    "unit_disappearance_during_food_deficit": "Own unit disappeared over END_TURN while a visible own city had negative food surplus; causal interpretation requires review"
+  },
+  "annotation_unit": "scene; labels can overlap",
+  "review": "script observations; causal interpretation requires case review"
+}

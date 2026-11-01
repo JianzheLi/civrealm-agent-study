@@ -4,7 +4,7 @@ _认知推理课程任务二：DeepSeek Agent 的跨任务诊断、失败案例�
 
 我们先在五种 CivRealm 小游戏中运行同一个 DeepSeek Agent，统计第一轮轨迹，找出跨任务共同的失败与行为模式；再根据证据提出改进，并在新场景上验证。
 
-**当前要做：五个任务、全部 normal，每任务 100 局，共 500 局第一轮轨迹；完成逐局统计、失败案例分析和可视化。** 本仓库目前提供框架与接口文档，尚未产出本轮轨迹、结果图或可运行入口。
+**当前要做：五个任务、全部 normal，每任务 100 局，共 500 局第一轮轨迹；完成逐局统计、失败案例分析和可视化。** 已实现 jianzheli 两个发展任务的采集、日志、统计和绘图入口；本轮实际覆盖与状态见 [发展任务运行说明](docs/development_run.md) 和生成的 reports/development/summary.json，不能把实现完成视为 200 局已经完成。
 
 全组统一使用 DeepSeek 当前最新发布模型。2026-11-01 核对为 **DeepSeek-V4.1-Flash-1017**，API 名称 `deepseek-flash`。[^latest-model] 首轮开始前统一核对版本，记录实际返回标识与日期；发现服务版本变化时分批记录，不混成同一模型结果。
 
@@ -126,7 +126,7 @@ flowchart TD
 
 每张图注明样本数、分母、模型/配置与数据来源。失败标签可多选，不把标签比例堆成互斥结局；原始分数不跨任务平均。调用与耗时图包含失败和截断，不能只画成功局。
 
-汇总时以场景为单位，一局的多次动作不是多个独立样本。优先从同一份逐局表和标签表生成图，所有案例能回到原始轨迹。以上是待第一轮数据产生的交付物，当前没有本轮结果图。
+汇总时以场景为单位，一局的多次动作不是多个独立样本。图表从同一份逐局表和标签表生成，所有案例能回到原始轨迹。两个发展任务的当前图表、案例和实际覆盖数位于 reports/development/；其余任务由对应负责人交付。
 
 ## 7. 🔬 首轮之后再做什么
 
@@ -144,14 +144,24 @@ flowchart TD
 | [docs/first_round_analysis.md](docs/first_round_analysis.md) | 当前统计、失败案例与可视化的具体指南 |
 | [docs/experiment_protocol.md](docs/experiment_protocol.md) | 实例使用、异常和比较口径 |
 | [docs/llm_study_design.md](docs/llm_study_design.md) | 模型与运行设置 |
-| [configs/](configs/README.md) | 后续真实配置和实例清单 |
+| [configs/](configs/README.md) | 运行配置和实例清单 |
 | [prompts/](prompts/README.md) | 统一基础提示词和后续方法版本 |
-| [src/](src/README.md)、[scripts/](scripts/README.md) | 待实现模块与真实运行入口 |
+| [src/](src/README.md)、[scripts/](scripts/README.md) | 已实现的公共模块和发展任务运行入口 |
 | [reports/](reports/README.md) | 精简统计表、标签、案例、图表与报告 |
 
 源码、配置、实例清单和精简交付物进入 Git；完整观察、存档、轨迹、视频和缓存留在服务器。密钥通过 DEEPSEEK_API_KEY 环境变量读取。
 
-当前没有可运行入口。实现后同步补上依赖、命令和真实输出位置；不把示意文件名写成已经生成的实验结果。协作方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+本次GitHub提交包含正式批次的统计表、图表、案例摘要与报告；完整视频、原始请求/观察、SDK与旧版本报告归档不上传。案例HTML是本地回放入口，完整原始材料的恢复方式见[失败诊断说明](reports/failure_diagnosis/README.md)。
+
+本次 development-baseline-v5-20261101 已完成两个 normal 发展任务各100个可追溯策略结果。交付见 [首轮中文分析](reports/development/development_first_round.md)、[六个案例复核](reports/development/review_notes.md)、[逐局结果](reports/development/episode_results.csv) 和 [完整状态回放视频索引](reports/development/video_index.csv)。
+
+进一步的[失败机制分析与本地案例](reports/failure_diagnosis/README.md)保留了19个完整诊断案例，包括全部9个原生失败。可离线打开[案例浏览入口](reports/failure_diagnosis/index.html)查看回放与逐决策证据；大文件在 runs/local_review/，不进入Git。本轮仍按 thinking/high + 8K固定生成预算解释与统计。
+
+[课程报告正文与汇报提纲](reports/course_report/README.md)将上述结果整理为实验设置、结果分析、共同失败模式、讨论和结论，并附可直接使用的图表及证据入口。[失败共性分析](reports/course_report/失败共性分析.md)进一步对完整100局跨海追踪关键单位损失与恢复过程，以成功实例作对照。
+
+[固定8K的Agent改进方案](reports/course_report/固定8K的Agent改进方案.md)补充单局实际耗时及针对关键单位维护、恢复前提和反馈核对的后续设计。当前只整理方案，未修改基础Agent或启动新实验。
+
+两个发展任务的安装、部署、采集与分析命令见 [运行说明](docs/development_run.md)。共用模块可供其他任务复用；其余三份任务说明和采集尚待各负责人完成。协作方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 9. 📚 参考资料与文档说明
 

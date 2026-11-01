@@ -8,7 +8,7 @@
 - battle_defend_city：守城。
 - diplomacy_trade_tech：科技交易。
 
-从 [TEMPLATE.md](TEMPLATE.md) 复制内容，为每个任务创建以官方 task_type 命名的 Markdown 文件。模板已提供字段，但五份任务规则尚待依据真实实现填写。
+发展任务已填写：[建城](development_build_city.md)、[跨海建城](development_transport.md)。其余三任务从 [TEMPLATE.md](TEMPLATE.md) 复制填写，依据真实实现核实规则。
 
 说明需要包含规则来源、统一任务目标、可见信息、相关动作与前提、原生成功/失败/到期判定、分数和目标含义，以及可作为进展证据的状态变化。原生回合限制与 runner 的宽松动作停止线分开说明。
 

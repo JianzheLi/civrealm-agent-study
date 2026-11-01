@@ -1,0 +1,2705 @@
+{
+  "run_id": "development-baseline-v5-20261101",
+  "generated_at": "2026-11-01T07:29:28.114174+00:00",
+  "episodes": 200,
+  "decisions": 2225,
+  "api_calls": 2726,
+  "correction_decisions": 501,
+  "recovered_decisions": 427,
+  "invalid_call_types": {
+    "length_empty": 565,
+    "length_partial_json": 8,
+    "other_output_error": 2
+  },
+  "terminal_output_signatures": {
+    "[[\"length\", false, 8192, 8192], [\"length\", false, 8192, 8192]]": 69,
+    "[[\"length\", false, 8192, 8192], [\"length\", false, 8191, 8191]]": 3,
+    "[[\"length\", false, 8191, 8191], [\"length\", false, 8192, 8192]]": 2
+  },
+  "transport_initial_condition_groups": {
+    "food_surplus=-3;land_units=3;ships=1": {
+      "n": 12,
+      "output_failure": 10,
+      "native_success": 1,
+      "native_failure": 1
+    },
+    "food_surplus=-4;land_units=5;ships=1": {
+      "n": 2,
+      "native_success": 2
+    },
+    "food_surplus=-2;land_units=2;ships=1": {
+      "n": 11,
+      "output_failure": 9,
+      "native_failure": 2
+    },
+    "food_surplus=-2;land_units=2;ships=3": {
+      "n": 3,
+      "native_failure": 1,
+      "output_failure": 2
+    },
+    "food_surplus=-1;land_units=2;ships=2": {
+      "n": 2,
+      "native_success": 2
+    },
+    "food_surplus=-2;land_units=3;ships=2": {
+      "n": 3,
+      "native_success": 3
+    },
+    "food_surplus=0;land_units=1;ships=1": {
+      "n": 8,
+      "native_success": 8
+    },
+    "food_surplus=-2;land_units=2;ships=2": {
+      "n": 7,
+      "output_failure": 7
+    },
+    "food_surplus=-3;land_units=3;ships=2": {
+      "n": 8,
+      "output_failure": 7,
+      "native_success": 1
+    },
+    "food_surplus=-1;land_units=2;ships=1": {
+      "n": 3,
+      "native_success": 3
+    },
+    "food_surplus=-4;land_units=4;ships=1": {
+      "n": 7,
+      "output_failure": 3,
+      "native_success": 3,
+      "native_failure": 1
+    },
+    "food_surplus=-3;land_units=3;ships=3": {
+      "n": 3,
+      "output_failure": 1,
+      "native_success": 1,
+      "native_failure": 1
+    },
+    "food_surplus=-5;land_units=5;ships=1": {
+      "n": 5,
+      "native_success": 5
+    },
+    "food_surplus=-4;land_units=4;ships=2": {
+      "n": 7,
+      "native_success": 3,
+      "native_failure": 2,
+      "output_failure": 2
+    },
+    "food_surplus=-1;land_units=1;ships=1": {
+      "n": 9,
+      "output_failure": 9
+    },
+    "food_surplus=-3;land_units=4;ships=2": {
+      "n": 2,
+      "native_success": 2
+    },
+    "food_surplus=-3;land_units=4;ships=1": {
+      "n": 2,
+      "native_success": 2
+    },
+    "food_surplus=-2;land_units=2;ships=0": {
+      "n": 3,
+      "output_failure": 3
+    },
+    "food_surplus=-1;land_units=2;ships=0": {
+      "n": 2,
+      "output_failure": 2
+    },
+    "food_surplus=-2;land_units=3;ships=1": {
+      "n": 1,
+      "native_success": 1
+    }
+  },
+  "native_failure_review": [
+    {
+      "task_type": "development_build_city",
+      "episode_id": "development_build_city-normal-349",
+      "instance_id": 349,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 56,
+      "api_calls": 66,
+      "initial_land_units": 1,
+      "initial_ships": 0,
+      "initial_food_surplus": null,
+      "famine_loss_notifications": 0,
+      "landing_actions": 0,
+      "population_block_notifications": 0,
+      "famine_steps": [],
+      "population_block_steps": [],
+      "landing_losses": []
+    },
+    {
+      "task_type": "development_transport",
+      "episode_id": "development_transport-normal-386",
+      "instance_id": 386,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 18,
+      "api_calls": 27,
+      "initial_land_units": 2,
+      "initial_ships": 3,
+      "initial_food_surplus": -2,
+      "famine_loss_notifications": 2,
+      "landing_actions": 1,
+      "population_block_notifications": 1,
+      "famine_steps": [
+        "development_transport-normal-386-attempt0-decision0003",
+        "development_transport-normal-386-attempt0-decision0006"
+      ],
+      "population_block_steps": [
+        "development_transport-normal-386-attempt0-decision0017"
+      ],
+      "landing_losses": [
+        {
+          "unit_id": "111",
+          "landing_step": "development_transport-normal-386-attempt0-decision0005",
+          "disappearance_step": "development_transport-normal-386-attempt0-decision0006",
+          "notices": [
+            "Famine feared in Hannover, Settlers lost!",
+            "Year: 3900 BCE"
+          ],
+          "cities_created": []
+        }
+      ]
+    },
+    {
+      "task_type": "development_transport",
+      "episode_id": "development_transport-normal-859",
+      "instance_id": 859,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 25,
+      "api_calls": 37,
+      "initial_land_units": 2,
+      "initial_ships": 1,
+      "initial_food_surplus": -2,
+      "famine_loss_notifications": 2,
+      "landing_actions": 0,
+      "population_block_notifications": 1,
+      "famine_steps": [
+        "development_transport-normal-859-attempt0-decision0002",
+        "development_transport-normal-859-attempt0-decision0006"
+      ],
+      "population_block_steps": [
+        "development_transport-normal-859-attempt0-decision0024"
+      ],
+      "landing_losses": []
+    },
+    {
+      "task_type": "development_transport",
+      "episode_id": "development_transport-normal-197",
+      "instance_id": 197,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 37,
+      "api_calls": 59,
+      "initial_land_units": 4,
+      "initial_ships": 2,
+      "initial_food_surplus": -4,
+      "famine_loss_notifications": 4,
+      "landing_actions": 2,
+      "population_block_notifications": 0,
+      "famine_steps": [
+        "development_transport-normal-197-attempt0-decision0002",
+        "development_transport-normal-197-attempt0-decision0004",
+        "development_transport-normal-197-attempt0-decision0008",
+        "development_transport-normal-197-attempt0-decision0010"
+      ],
+      "population_block_steps": [],
+      "landing_losses": [
+        {
+          "unit_id": "112",
+          "landing_step": "development_transport-normal-197-attempt0-decision0003",
+          "disappearance_step": "development_transport-normal-197-attempt0-decision0004",
+          "notices": [
+            "Famine feared in Hannover, Settlers lost!",
+            "Warning: Famine feared in Hannover.",
+            "Year: 3900 BCE"
+          ],
+          "cities_created": []
+        },
+        {
+          "unit_id": "111",
+          "landing_step": "development_transport-normal-197-attempt0-decision0009",
+          "disappearance_step": "development_transport-normal-197-attempt0-decision0010",
+          "notices": [
+            "Famine feared in Hannover, Settlers lost!",
+            "Year: 3800 BCE"
+          ],
+          "cities_created": []
+        }
+      ]
+    },
+    {
+      "task_type": "development_transport",
+      "episode_id": "development_transport-normal-606",
+      "instance_id": 606,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 16,
+      "api_calls": 22,
+      "initial_land_units": 3,
+      "initial_ships": 3,
+      "initial_food_surplus": -3,
+      "famine_loss_notifications": 3,
+      "landing_actions": 1,
+      "population_block_notifications": 0,
+      "famine_steps": [
+        "development_transport-normal-606-attempt0-decision0002",
+        "development_transport-normal-606-attempt0-decision0004",
+        "development_transport-normal-606-attempt0-decision0007"
+      ],
+      "population_block_steps": [],
+      "landing_losses": [
+        {
+          "unit_id": "112",
+          "landing_step": "development_transport-normal-606-attempt0-decision0003",
+          "disappearance_step": "development_transport-normal-606-attempt0-decision0004",
+          "notices": [
+            "Famine feared in Hannover, Settlers lost!",
+            "Warning: Famine feared in Hannover.",
+            "Year: 3900 BCE"
+          ],
+          "cities_created": []
+        }
+      ]
+    },
+    {
+      "task_type": "development_transport",
+      "episode_id": "development_transport-normal-75",
+      "instance_id": 75,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 18,
+      "api_calls": 23,
+      "initial_land_units": 4,
+      "initial_ships": 2,
+      "initial_food_surplus": -4,
+      "famine_loss_notifications": 4,
+      "landing_actions": 2,
+      "population_block_notifications": 0,
+      "famine_steps": [
+        "development_transport-normal-75-attempt0-decision0002",
+        "development_transport-normal-75-attempt0-decision0004",
+        "development_transport-normal-75-attempt0-decision0008",
+        "development_transport-normal-75-attempt0-decision0010"
+      ],
+      "population_block_steps": [],
+      "landing_losses": [
+        {
+          "unit_id": "112",
+          "landing_step": "development_transport-normal-75-attempt0-decision0003",
+          "disappearance_step": "development_transport-normal-75-attempt0-decision0004",
+          "notices": [
+            "Famine feared in Hannover, Settlers lost!",
+            "Warning: Famine feared in Hannover.",
+            "Year: 3900 BCE"
+          ],
+          "cities_created": []
+        },
+        {
+          "unit_id": "111",
+          "landing_step": "development_transport-normal-75-attempt0-decision0009",
+          "disappearance_step": "development_transport-normal-75-attempt0-decision0010",
+          "notices": [
+            "Hannover is finished building Warriors.",
+            "Famine feared in Hannover, Settlers lost!",
+            "Year: 3800 BCE"
+          ],
+          "cities_created": []
+        }
+      ]
+    },
+    {
+      "task_type": "development_transport",
+      "episode_id": "development_transport-normal-650",
+      "instance_id": 650,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 26,
+      "api_calls": 38,
+      "initial_land_units": 3,
+      "initial_ships": 1,
+      "initial_food_surplus": -3,
+      "famine_loss_notifications": 3,
+      "landing_actions": 1,
+      "population_block_notifications": 1,
+      "famine_steps": [
+        "development_transport-normal-650-attempt0-decision0002",
+        "development_transport-normal-650-attempt0-decision0004",
+        "development_transport-normal-650-attempt0-decision0008"
+      ],
+      "population_block_steps": [
+        "development_transport-normal-650-attempt0-decision0025"
+      ],
+      "landing_losses": [
+        {
+          "unit_id": "112",
+          "landing_step": "development_transport-normal-650-attempt0-decision0003",
+          "disappearance_step": "development_transport-normal-650-attempt0-decision0004",
+          "notices": [
+            "Famine feared in Hannover, Settlers lost!",
+            "Warning: Famine feared in Hannover.",
+            "Year: 3900 BCE"
+          ],
+          "cities_created": []
+        }
+      ]
+    },
+    {
+      "task_type": "development_transport",
+      "episode_id": "development_transport-normal-689",
+      "instance_id": 689,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 28,
+      "api_calls": 37,
+      "initial_land_units": 4,
+      "initial_ships": 1,
+      "initial_food_surplus": -4,
+      "famine_loss_notifications": 4,
+      "landing_actions": 2,
+      "population_block_notifications": 1,
+      "famine_steps": [
+        "development_transport-normal-689-attempt0-decision0003",
+        "development_transport-normal-689-attempt0-decision0005",
+        "development_transport-normal-689-attempt0-decision0010",
+        "development_transport-normal-689-attempt0-decision0013"
+      ],
+      "population_block_steps": [
+        "development_transport-normal-689-attempt0-decision0027"
+      ],
+      "landing_losses": [
+        {
+          "unit_id": "112",
+          "landing_step": "development_transport-normal-689-attempt0-decision0004",
+          "disappearance_step": "development_transport-normal-689-attempt0-decision0005",
+          "notices": [
+            "Famine feared in Hannover, Settlers lost!",
+            "Warning: Famine feared in Hannover.",
+            "Year: 3900 BCE"
+          ],
+          "cities_created": []
+        },
+        {
+          "unit_id": "111",
+          "landing_step": "development_transport-normal-689-attempt0-decision0012",
+          "disappearance_step": "development_transport-normal-689-attempt0-decision0013",
+          "notices": [
+            "Famine feared in Hannover, Settlers lost!",
+            "Year: 3800 BCE"
+          ],
+          "cities_created": []
+        }
+      ]
+    },
+    {
+      "task_type": "development_transport",
+      "episode_id": "development_transport-normal-351",
+      "instance_id": 351,
+      "stop_reason": "native_failure",
+      "success": false,
+      "env_steps": 25,
+      "api_calls": 34,
+      "initial_land_units": 2,
+      "initial_ships": 1,
+      "initial_food_surplus": -2,
+      "famine_loss_notifications": 2,
+      "landing_actions": 0,
+      "population_block_notifications": 2,
+      "famine_steps": [
+        "development_transport-normal-351-attempt0-decision0002",
+        "development_transport-normal-351-attempt0-decision0007"
+      ],
+      "population_block_steps": [
+        "development_transport-normal-351-attempt0-decision0023",
+        "development_transport-normal-351-attempt0-decision0024"
+      ],
+      "landing_losses": []
+    }
+  ],
+  "other_output_errors": [
+    {
+      "episode_id": "development_transport-normal-665",
+      "error": {
+        "call_id": "development_transport-normal-665-attempt0-decision0005-call0",
+        "error": "Extra data: line 3 column 1 (char 136)"
+      },
+      "call": {
+        "call_id": "development_transport-normal-665-attempt0-decision0005-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\": 95, \"reason\": \"让载有移民的三列桨战船向东北移动到(4,3)，紧邻新大陆草地(5,3)，为本回合后移民恢复移动力并登陆建城做准备。\", \"expected_effect\": \"三列桨战船带移民移至(4,3)，相邻新大陆海岸\"}\n\nWait, I should output only JSON. Let me correct - I included extra text. The response must be strictly JSON object.<｜end▁of▁thinking｜>{\"action_id\": 95, \"reason\": \"三列桨战船载移民向东北移到(4,3)，紧邻新大陆草地(5,3)，待下回合移民恢复移动力后登陆建城。\", \"expected_effect\": \"战船带移民抵达(4,3)，相邻新大陆海岸\"}",
+        "prompt_tokens": 21427,
+        "completion_tokens": 2926,
+        "reasoning_tokens": 2752,
+        "latency_s": 16.333284616470337
+      }
+    },
+    {
+      "episode_id": "development_transport-normal-999",
+      "error": {
+        "call_id": "development_transport-normal-999-attempt0-decision0003-call0",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "call": {
+        "call_id": "development_transport-normal-999-attempt0-decision0003-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "",
+        "prompt_tokens": 20889,
+        "completion_tokens": 5533,
+        "reasoning_tokens": 5533,
+        "latency_s": 34.7522349357605
+      }
+    }
+  ],
+  "nonempty_length_calls": [
+    {
+      "episode_id": "development_build_city-normal-61",
+      "call_id": "development_build_city-normal-61-attempt0-decision0026-call0",
+      "purpose": "decision",
+      "finish_reason": "length",
+      "content": "{\"action_id\": 96, \"reason\": \"当前(13,7)评分5.2，低于目标6.4；向东进入(14,7)可侦察尚未探索的x=15区域，并保留2点移动力继续寻找资源更丰富的建城点。\", \"",
+      "prompt_tokens": 20868,
+      "completion_tokens": 8192,
+      "reasoning_tokens": 8129,
+      "latency_s": 51.7848961353302
+    },
+    {
+      "episode_id": "development_build_city-normal-948",
+      "call_id": "development_build_city-normal-948-attempt0-decision0032-call0",
+      "purpose": "decision",
+      "finish_reason": "length",
+      "content": "{\"action_id\": 92, \"reason\": \"当前评分5.6未达6.0，需继续侦察。向东北进入(1,7)丛林，接近北侧未探索内陆，寻找资源更丰富的城址。",
+      "prompt_tokens": 23131,
+      "completion_tokens": 8192,
+      "reasoning_tokens": 8141,
+      "latency_s": 44.41703653335571
+    },
+    {
+      "episode_id": "development_build_city-normal-349",
+      "call_id": "development_build_city-normal-349-attempt0-decision0052-call0",
+      "purpose": "decision",
+      "finish_reason": "length",
+      "content": "{\"action_id\":87,\"reason\":\"当前丘陵城址评分5.6，距目标仅差0.4。开矿可提升地块产出，待矿山完工后评分应达6.0；之后立即建城",
+      "prompt_tokens": 24498,
+      "completion_tokens": 8192,
+      "reasoning_tokens": 8144,
+      "latency_s": 51.35058307647705
+    },
+    {
+      "episode_id": "development_build_city-normal-665",
+      "call_id": "development_build_city-normal-665-attempt0-decision0006-call0",
+      "purpose": "decision",
+      "finish_reason": "length",
+      "content": "{\"action_id\": 92, \"reason\": \"当前评分5.2未达标，向西北移动到已知苔原(10,8)，仍靠近绿洲与铁资源，并探索未知",
+      "prompt_tokens": 18690,
+      "completion_tokens": 8192,
+      "reasoning_tokens": 8150,
+      "latency_s": 48.74506711959839
+    },
+    {
+      "episode_id": "development_transport-normal-656",
+      "call_id": "development_transport-normal-656-attempt0-decision0012-call0",
+      "purpose": "decision",
+      "finish_reason": "length",
+      "content": "{\"action_id\": 135, \"reason\": \"三列桨船已停在(11,9)外海，紧邻汉诺威旁的登陆点(11,8)/(12,9)，可随时接载移民；汉诺威已改为建造移民(约11回合)。本回合无更优运输动作，结束回合以推进移民生产。\", \"expected_effect\": \"回合推进，汉诺威盾牌累积",
+      "prompt_tokens": 20600,
+      "completion_tokens": 8192,
+      "reasoning_tokens": 8100,
+      "latency_s": 50.87808275222778
+    },
+    {
+      "episode_id": "development_transport-normal-424",
+      "call_id": "development_transport-normal-424-attempt0-decision0001-call0",
+      "purpose": "decision",
+      "finish_reason": "length",
+      "content": "{\"action_id\": 96, \"reason\": \"将三角帆船向西南移动到(10,11)，使其紧邻(9,11)的新大陆草地，下回合可让移民登陆建",
+      "prompt_tokens": 20410,
+      "completion_tokens": 8192,
+      "reasoning_tokens": 8149,
+      "latency_s": 48.876113414764404
+    },
+    {
+      "episode_id": "development_transport-normal-780",
+      "call_id": "development_transport-normal-780-attempt0-decision0008-call0",
+      "purpose": "decision",
+      "finish_reason": "length",
+      "content": "{\"action_id\": 2, \"reason\": \"移民111在新大陆回合结束时因饥荒消息被判定丢失，当前只剩两艘三列桨船。汉诺威",
+      "prompt_tokens": 22112,
+      "completion_tokens": 8192,
+      "reasoning_tokens": 8154,
+      "latency_s": 50.565497636795044
+    },
+    {
+      "episode_id": "development_transport-normal-513",
+      "call_id": "development_transport-normal-513-attempt0-decision0009-call0",
+      "purpose": "decision",
+      "finish_reason": "length",
+      "content": "{\"action_id\": 150, \"reason\": \"开拓者111本回合登船耗尽移动力(0)，已随三列桨船116抵达(5,4)，正对北方草原(5,3)。结束回合让其恢复移动力；下回合向北登陆(5,3)并就地建城，即可在新大陆完成建城目标。\", \"expected_effect\":",
+      "prompt_tokens": 23564,
+      "completion_tokens": 8192,
+      "reasoning_tokens": 8110,
+      "latency_s": 46.09204888343811
+    }
+  ],
+  "terminal_output_evidence": [
+    {
+      "episode_id": "development_build_city-normal-118",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-118-attempt0-decision0018-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21909,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 45.987197399139404
+        },
+        {
+          "call_id": "development_build_city-normal-118-attempt0-decision0018-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21941,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 44.641191244125366
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-666",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-666-attempt0-decision0000-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18494,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.4099702835083
+        },
+        {
+          "call_id": "development_build_city-normal-666-attempt0-decision0000-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18526,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.33022379875183
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-281",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-281-attempt0-decision0024-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21538,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.74929761886597
+        },
+        {
+          "call_id": "development_build_city-normal-281-attempt0-decision0024-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21570,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 47.97826910018921
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-128",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-128-attempt0-decision0020-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22548,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 47.757731676101685
+        },
+        {
+          "call_id": "development_build_city-normal-128-attempt0-decision0020-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22580,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 44.61044120788574
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-139",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-139-attempt0-decision0012-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19801,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.77018761634827
+        },
+        {
+          "call_id": "development_build_city-normal-139-attempt0-decision0012-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19833,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 41.938847064971924
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-26",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-26-attempt0-decision0010-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19167,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.62334442138672
+        },
+        {
+          "call_id": "development_build_city-normal-26-attempt0-decision0010-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19199,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 42.500067472457886
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-190",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-190-attempt0-decision0004-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18841,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.14726376533508
+        },
+        {
+          "call_id": "development_build_city-normal-190-attempt0-decision0004-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18873,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 43.37532711029053
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-987",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-987-attempt0-decision0026-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22727,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.356360912323
+        },
+        {
+          "call_id": "development_build_city-normal-987-attempt0-decision0026-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22759,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 40.51251816749573
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-160",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-160-attempt0-decision0026-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 24152,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 47.33548307418823
+        },
+        {
+          "call_id": "development_build_city-normal-160-attempt0-decision0026-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 24184,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 37.92795419692993
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-254",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-254-attempt0-decision0014-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19327,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.69280505180359
+        },
+        {
+          "call_id": "development_build_city-normal-254-attempt0-decision0014-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19359,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.06472039222717
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-615",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-615-attempt0-decision0000-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18480,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.4477813243866
+        },
+        {
+          "call_id": "development_build_city-normal-615-attempt0-decision0000-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18512,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 41.44884419441223
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-62",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-62-attempt0-decision0014-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20429,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 46.842259883880615
+        },
+        {
+          "call_id": "development_build_city-normal-62-attempt0-decision0014-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20461,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 42.50070405006409
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-163",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-163-attempt0-decision0020-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21021,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 46.49320864677429
+        },
+        {
+          "call_id": "development_build_city-normal-163-attempt0-decision0020-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21053,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 42.169918060302734
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-566",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-566-attempt0-decision0020-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21784,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 46.94232106208801
+        },
+        {
+          "call_id": "development_build_city-normal-566-attempt0-decision0020-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21816,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.69705414772034
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-930",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-930-attempt0-decision0010-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19896,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 44.54811382293701
+        },
+        {
+          "call_id": "development_build_city-normal-930-attempt0-decision0010-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19928,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 45.77378511428833
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-599",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-599-attempt0-decision0014-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19932,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.07206988334656
+        },
+        {
+          "call_id": "development_build_city-normal-599-attempt0-decision0014-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19964,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 44.93926644325256
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-727",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-727-attempt0-decision0004-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18555,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 44.81053948402405
+        },
+        {
+          "call_id": "development_build_city-normal-727-attempt0-decision0004-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18587,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 42.04084134101868
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-4",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-4-attempt0-decision0002-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 17847,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 44.27965044975281
+        },
+        {
+          "call_id": "development_build_city-normal-4-attempt0-decision0002-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 17879,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 41.35552716255188
+        }
+      ]
+    },
+    {
+      "episode_id": "development_build_city-normal-706",
+      "calls": [
+        {
+          "call_id": "development_build_city-normal-706-attempt0-decision0004-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18917,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 47.90582752227783
+        },
+        {
+          "call_id": "development_build_city-normal-706-attempt0-decision0004-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 18949,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.378326416015625
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-580",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-580-attempt0-decision0010-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20721,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.324939012527466
+        },
+        {
+          "call_id": "development_transport-normal-580-attempt0-decision0010-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20753,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.402998208999634
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-991",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-991-attempt0-decision0023-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20708,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.836225748062134
+        },
+        {
+          "call_id": "development_transport-normal-991-attempt0-decision0023-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20740,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.13993501663208
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-656",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-656-attempt0-decision0015-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20407,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.99415826797485
+        },
+        {
+          "call_id": "development_transport-normal-656-attempt0-decision0015-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20439,
+          "completion_tokens": 8191,
+          "reasoning_tokens": 8191,
+          "latency_s": 54.61117148399353
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-163",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-163-attempt0-decision0018-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23299,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.55863356590271
+        },
+        {
+          "call_id": "development_transport-normal-163-attempt0-decision0018-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23331,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 46.64116454124451
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-45",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-45-attempt0-decision0008-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21792,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.99516224861145
+        },
+        {
+          "call_id": "development_transport-normal-45-attempt0-decision0008-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21824,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.11439108848572
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-780",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-780-attempt0-decision0009-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21935,
+          "completion_tokens": 8191,
+          "reasoning_tokens": 8191,
+          "latency_s": 50.57895755767822
+        },
+        {
+          "call_id": "development_transport-normal-780-attempt0-decision0009-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21967,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.8668737411499
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-788",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-788-attempt0-decision0013-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20799,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.765278577804565
+        },
+        {
+          "call_id": "development_transport-normal-788-attempt0-decision0013-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20831,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.360249519348145
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-958",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-958-attempt0-decision0012-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23036,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.06901931762695
+        },
+        {
+          "call_id": "development_transport-normal-958-attempt0-decision0012-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23068,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.70547795295715
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-814",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-814-attempt0-decision0013-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19288,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.12279510498047
+        },
+        {
+          "call_id": "development_transport-normal-814-attempt0-decision0013-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19320,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.66046619415283
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-976",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-976-attempt0-decision0010-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21205,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.00826954841614
+        },
+        {
+          "call_id": "development_transport-normal-976-attempt0-decision0010-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21237,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.57917046546936
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-920",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-920-attempt0-decision0009-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21852,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.20205640792847
+        },
+        {
+          "call_id": "development_transport-normal-920-attempt0-decision0009-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21884,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 44.58572959899902
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-612",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-612-attempt0-decision0004-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21035,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.25214886665344
+        },
+        {
+          "call_id": "development_transport-normal-612-attempt0-decision0004-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21067,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.18306279182434
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-190",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-190-attempt0-decision0017-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20298,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 53.76760125160217
+        },
+        {
+          "call_id": "development_transport-normal-190-attempt0-decision0017-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20330,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.01837134361267
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-572",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-572-attempt0-decision0010-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20785,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.654881954193115
+        },
+        {
+          "call_id": "development_transport-normal-572-attempt0-decision0010-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20817,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.21739721298218
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-578",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-578-attempt0-decision0021-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22716,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.46546030044556
+        },
+        {
+          "call_id": "development_transport-normal-578-attempt0-decision0021-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22748,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 46.93260884284973
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-818",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-818-attempt0-decision0020-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23733,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.31399703025818
+        },
+        {
+          "call_id": "development_transport-normal-818-attempt0-decision0020-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23765,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 53.06766486167908
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-204",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-204-attempt0-decision0011-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20946,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.18156695365906
+        },
+        {
+          "call_id": "development_transport-normal-204-attempt0-decision0011-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20978,
+          "completion_tokens": 8191,
+          "reasoning_tokens": 8191,
+          "latency_s": 48.838261127471924
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-513",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-513-attempt0-decision0016-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23221,
+          "completion_tokens": 8191,
+          "reasoning_tokens": 8191,
+          "latency_s": 50.46538472175598
+        },
+        {
+          "call_id": "development_transport-normal-513-attempt0-decision0016-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23253,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.07079601287842
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-56",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-56-attempt0-decision0019-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23396,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 60.92558813095093
+        },
+        {
+          "call_id": "development_transport-normal-56-attempt0-decision0019-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23428,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 55.40795397758484
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-648",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-648-attempt0-decision0036-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22801,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.251729249954224
+        },
+        {
+          "call_id": "development_transport-normal-648-attempt0-decision0036-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22833,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.968786001205444
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-88",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-88-attempt0-decision0003-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23308,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.83078646659851
+        },
+        {
+          "call_id": "development_transport-normal-88-attempt0-decision0003-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23340,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.11860466003418
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-655",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-655-attempt0-decision0008-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23174,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.684879541397095
+        },
+        {
+          "call_id": "development_transport-normal-655-attempt0-decision0008-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23206,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.371954917907715
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-538",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-538-attempt0-decision0015-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20215,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.033305168151855
+        },
+        {
+          "call_id": "development_transport-normal-538-attempt0-decision0015-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20247,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.37438678741455
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-791",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-791-attempt0-decision0012-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23965,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.257105588912964
+        },
+        {
+          "call_id": "development_transport-normal-791-attempt0-decision0012-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23997,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.85674715042114
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-701",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-701-attempt0-decision0034-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23461,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.92811298370361
+        },
+        {
+          "call_id": "development_transport-normal-701-attempt0-decision0034-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23493,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 56.34684610366821
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-555",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-555-attempt0-decision0007-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21650,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.511566400527954
+        },
+        {
+          "call_id": "development_transport-normal-555-attempt0-decision0007-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21682,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.04706883430481
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-3",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-3-attempt0-decision0013-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23318,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.47751045227051
+        },
+        {
+          "call_id": "development_transport-normal-3-attempt0-decision0013-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 23350,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.87382960319519
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-20",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-20-attempt0-decision0007-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22277,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.49565291404724
+        },
+        {
+          "call_id": "development_transport-normal-20-attempt0-decision0007-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22309,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.84973430633545
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-467",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-467-attempt0-decision0004-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21034,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 55.67531228065491
+        },
+        {
+          "call_id": "development_transport-normal-467-attempt0-decision0004-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21066,
+          "completion_tokens": 8191,
+          "reasoning_tokens": 8191,
+          "latency_s": 57.560202836990356
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-999",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-999-attempt0-decision0005-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21014,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 55.40434741973877
+        },
+        {
+          "call_id": "development_transport-normal-999-attempt0-decision0005-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21046,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.390199184417725
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-558",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-558-attempt0-decision0009-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20869,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 47.111231327056885
+        },
+        {
+          "call_id": "development_transport-normal-558-attempt0-decision0009-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20901,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.18644690513611
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-71",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-71-attempt0-decision0007-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21525,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.198065996170044
+        },
+        {
+          "call_id": "development_transport-normal-71-attempt0-decision0007-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21557,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 47.15339946746826
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-738",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-738-attempt0-decision0006-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20938,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.48233962059021
+        },
+        {
+          "call_id": "development_transport-normal-738-attempt0-decision0006-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20970,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 46.730722427368164
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-989",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-989-attempt0-decision0006-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20924,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.93670606613159
+        },
+        {
+          "call_id": "development_transport-normal-989-attempt0-decision0006-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20956,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 55.244306802749634
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-614",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-614-attempt0-decision0002-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19418,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.22308683395386
+        },
+        {
+          "call_id": "development_transport-normal-614-attempt0-decision0002-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19450,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 53.579487323760986
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-679",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-679-attempt0-decision0007-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20654,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.275185346603394
+        },
+        {
+          "call_id": "development_transport-normal-679-attempt0-decision0007-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20686,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.415969371795654
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-228",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-228-attempt0-decision0008-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21830,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.1163010597229
+        },
+        {
+          "call_id": "development_transport-normal-228-attempt0-decision0008-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21862,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.937283754348755
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-514",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-514-attempt0-decision0007-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22163,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.96802544593811
+        },
+        {
+          "call_id": "development_transport-normal-514-attempt0-decision0007-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22195,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.37835431098938
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-811",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-811-attempt0-decision0012-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20227,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.40880799293518
+        },
+        {
+          "call_id": "development_transport-normal-811-attempt0-decision0012-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20259,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 47.37741231918335
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-610",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-610-attempt0-decision0006-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22307,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.43867897987366
+        },
+        {
+          "call_id": "development_transport-normal-610-attempt0-decision0006-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22339,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.11776685714722
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-101",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-101-attempt0-decision0015-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19934,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.26160740852356
+        },
+        {
+          "call_id": "development_transport-normal-101-attempt0-decision0015-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19966,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 53.1887891292572
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-300",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-300-attempt0-decision0005-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20260,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.92487406730652
+        },
+        {
+          "call_id": "development_transport-normal-300-attempt0-decision0005-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20292,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.22912955284119
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-906",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-906-attempt0-decision0023-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20108,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 58.20200800895691
+        },
+        {
+          "call_id": "development_transport-normal-906-attempt0-decision0023-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20140,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 55.611273527145386
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-576",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-576-attempt0-decision0010-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21728,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 48.45695495605469
+        },
+        {
+          "call_id": "development_transport-normal-576-attempt0-decision0010-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21760,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 55.50814199447632
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-534",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-534-attempt0-decision0008-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20655,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 53.14243483543396
+        },
+        {
+          "call_id": "development_transport-normal-534-attempt0-decision0008-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20687,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 56.04046869277954
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-446",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-446-attempt0-decision0003-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19730,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 57.40400838851929
+        },
+        {
+          "call_id": "development_transport-normal-446-attempt0-decision0003-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19762,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 56.311803102493286
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-127",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-127-attempt0-decision0000-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21661,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.4682457447052
+        },
+        {
+          "call_id": "development_transport-normal-127-attempt0-decision0000-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21693,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.27959227561951
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-162",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-162-attempt0-decision0011-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21596,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.48522067070007
+        },
+        {
+          "call_id": "development_transport-normal-162-attempt0-decision0011-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21628,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.210798025131226
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-329",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-329-attempt0-decision0010-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19357,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 56.09346890449524
+        },
+        {
+          "call_id": "development_transport-normal-329-attempt0-decision0010-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19389,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 55.7304105758667
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-852",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-852-attempt0-decision0019-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20706,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 50.03893184661865
+        },
+        {
+          "call_id": "development_transport-normal-852-attempt0-decision0019-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20738,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 53.20201396942139
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-936",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-936-attempt0-decision0008-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22028,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.297749757766724
+        },
+        {
+          "call_id": "development_transport-normal-936-attempt0-decision0008-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 22060,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.63185667991638
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-724",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-724-attempt0-decision0007-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21119,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 52.582021951675415
+        },
+        {
+          "call_id": "development_transport-normal-724-attempt0-decision0007-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 21151,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.07791614532471
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-23",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-23-attempt0-decision0016-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20369,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 49.955421686172485
+        },
+        {
+          "call_id": "development_transport-normal-23-attempt0-decision0016-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 20401,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 51.96642279624939
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-503",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-503-attempt0-decision0003-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19787,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 54.39368438720703
+        },
+        {
+          "call_id": "development_transport-normal-503-attempt0-decision0003-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 19819,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 53.938812017440796
+        }
+      ]
+    },
+    {
+      "episode_id": "development_transport-normal-732",
+      "calls": [
+        {
+          "call_id": "development_transport-normal-732-attempt0-decision0012-call0",
+          "purpose": "decision",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 24110,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 55.46272683143616
+        },
+        {
+          "call_id": "development_transport-normal-732-attempt0-decision0012-call1",
+          "purpose": "correction",
+          "finish_reason": "length",
+          "content": "",
+          "prompt_tokens": 24142,
+          "completion_tokens": 8192,
+          "reasoning_tokens": 8192,
+          "latency_s": 56.65018844604492
+        }
+      ]
+    }
+  ],
+  "selected_cases": [
+    {
+      "task_type": "development_build_city",
+      "instance_id": 349,
+      "role": "原生失败",
+      "reason": "唯一建城原生失败：反复探索、误把工程增产当评分提高，最后低于目标建城。",
+      "episode_id": "development_build_city-normal-349",
+      "outcome": "native_failure",
+      "env_steps": 56,
+      "api_calls": 66,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_build_city-normal-349/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-349/attempt0",
+      "bytes": 139550423,
+      "files": 63,
+      "case_path": "cases/development_build_city-normal-349/case.md",
+      "html_path": "cases/development_build_city-normal-349/index.html"
+    },
+    {
+      "task_type": "development_build_city",
+      "instance_id": 254,
+      "role": "输出失败",
+      "reason": "探索过程中普通与纠错输出连续为空，原生游戏尚未结束。",
+      "episode_id": "development_build_city-normal-254",
+      "outcome": "output_failure",
+      "env_steps": 14,
+      "api_calls": 16,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_build_city-normal-254/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-254/attempt0",
+      "bytes": 36102466,
+      "files": 22,
+      "case_path": "cases/development_build_city-normal-254/case.md",
+      "html_path": "cases/development_build_city-normal-254/index.html"
+    },
+    {
+      "task_type": "development_build_city",
+      "instance_id": 666,
+      "role": "输出失败",
+      "reason": "零环境动作即停止，隔离展示输出问题不能被归因于错误游戏操作。",
+      "episode_id": "development_build_city-normal-666",
+      "outcome": "output_failure",
+      "env_steps": 0,
+      "api_calls": 2,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0",
+      "bytes": 2846064,
+      "files": 8,
+      "case_path": "cases/development_build_city-normal-666/case.md",
+      "html_path": "cases/development_build_city-normal-666/index.html"
+    },
+    {
+      "task_type": "development_build_city",
+      "instance_id": 93,
+      "role": "成功参照",
+      "reason": "达到目标后因移动力为零合法等待，再就地建城；避免将合理等待误标为拖延。",
+      "episode_id": "development_build_city-normal-93",
+      "outcome": "native_success",
+      "env_steps": 7,
+      "api_calls": 7,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0",
+      "bytes": 18092315,
+      "files": 14,
+      "case_path": "cases/development_build_city-normal-93/case.md",
+      "html_path": "cases/development_build_city-normal-93/index.html"
+    },
+    {
+      "task_type": "development_build_city",
+      "instance_id": 948,
+      "role": "成功参照",
+      "reason": "51次动作、58次调用后仍成功，包含截断JSON后的纠错恢复；与349的长轨迹失败对照。",
+      "episode_id": "development_build_city-normal-948",
+      "outcome": "native_success",
+      "env_steps": 51,
+      "api_calls": 58,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_build_city-normal-948/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-948/attempt0",
+      "bytes": 127215472,
+      "files": 58,
+      "case_path": "cases/development_build_city-normal-948/case.md",
+      "html_path": "cases/development_build_city-normal-948/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 976,
+      "role": "输出失败",
+      "reason": "已装载和载运，粮荒损失移民后的恢复阶段又发生连续空输出。",
+      "episode_id": "development_transport-normal-976",
+      "outcome": "output_failure",
+      "env_steps": 10,
+      "api_calls": 15,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0",
+      "bytes": 27882466,
+      "files": 18,
+      "case_path": "cases/development_transport-normal-976/case.md",
+      "html_path": "cases/development_transport-normal-976/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 351,
+      "role": "原生失败",
+      "reason": "粮荒损失两名移民，购买生产后仍受城市人口前提限制，明确反馈后继续等待至到期。",
+      "episode_id": "development_transport-normal-351",
+      "outcome": "native_failure",
+      "env_steps": 25,
+      "api_calls": 34,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-351/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-351/attempt0",
+      "bytes": 62944456,
+      "files": 32,
+      "case_path": "cases/development_transport-normal-351/case.md",
+      "html_path": "cases/development_transport-normal-351/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 386,
+      "role": "原生失败",
+      "reason": "已登陆的移民在建城前损失，后续重新生产受人口限制，保留全部原生失败之一。",
+      "episode_id": "development_transport-normal-386",
+      "outcome": "native_failure",
+      "env_steps": 18,
+      "api_calls": 27,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-386/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-386/attempt0",
+      "bytes": 46991059,
+      "files": 25,
+      "case_path": "cases/development_transport-normal-386/case.md",
+      "html_path": "cases/development_transport-normal-386/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 197,
+      "role": "原生失败",
+      "reason": "跨海调用最多的失败：37次动作、59次调用，多次登陆仍未建城，展示高开销恢复过程。",
+      "episode_id": "development_transport-normal-197",
+      "outcome": "native_failure",
+      "env_steps": 37,
+      "api_calls": 59,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-197/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-197/attempt0",
+      "bytes": 95520513,
+      "files": 44,
+      "case_path": "cases/development_transport-normal-197/case.md",
+      "html_path": "cases/development_transport-normal-197/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 606,
+      "role": "原生失败",
+      "reason": "曾登陆，但后续关键单位损失并到期；与从未登陆的失败区别阅读。",
+      "episode_id": "development_transport-normal-606",
+      "outcome": "native_failure",
+      "env_steps": 16,
+      "api_calls": 22,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-606/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-606/attempt0",
+      "bytes": 41993311,
+      "files": 23,
+      "case_path": "cases/development_transport-normal-606/case.md",
+      "html_path": "cases/development_transport-normal-606/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 650,
+      "role": "原生失败",
+      "reason": "登陆、粮荒损失、重建与人口条件相互制约，保留全部原生失败之一。",
+      "episode_id": "development_transport-normal-650",
+      "outcome": "native_failure",
+      "env_steps": 26,
+      "api_calls": 38,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-650/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-650/attempt0",
+      "bytes": 65801431,
+      "files": 33,
+      "case_path": "cases/development_transport-normal-650/case.md",
+      "html_path": "cases/development_transport-normal-650/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 689,
+      "role": "原生失败",
+      "reason": "两次登陆和多次粮荒损失后，重建受人口限制而失败，保留完整恢复过程。",
+      "episode_id": "development_transport-normal-689",
+      "outcome": "native_failure",
+      "env_steps": 28,
+      "api_calls": 37,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-689/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-689/attempt0",
+      "bytes": 71053590,
+      "files": 35,
+      "case_path": "cases/development_transport-normal-689/case.md",
+      "html_path": "cases/development_transport-normal-689/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 75,
+      "role": "原生失败",
+      "reason": "两次登陆但都未完成建城，展示登陆不等于任务完成。",
+      "episode_id": "development_transport-normal-75",
+      "outcome": "native_failure",
+      "env_steps": 18,
+      "api_calls": 23,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-75/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-75/attempt0",
+      "bytes": 47175135,
+      "files": 25,
+      "case_path": "cases/development_transport-normal-75/case.md",
+      "html_path": "cases/development_transport-normal-75/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 859,
+      "role": "原生失败",
+      "reason": "没有完成登陆，移民损失后重建受人口限制；本正式版本原生胜负已知。",
+      "episode_id": "development_transport-normal-859",
+      "outcome": "native_failure",
+      "env_steps": 25,
+      "api_calls": 37,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-859/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-859/attempt0",
+      "bytes": 63087091,
+      "files": 32,
+      "case_path": "cases/development_transport-normal-859/case.md",
+      "html_path": "cases/development_transport-normal-859/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 631,
+      "role": "成功参照",
+      "reason": "同船载运两名移民，粮荒后仍有幸存者在登陆地建城；包含完整同一单位证据链。",
+      "episode_id": "development_transport-normal-631",
+      "outcome": "native_success",
+      "env_steps": 8,
+      "api_calls": 9,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-631/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-631/attempt0",
+      "bytes": 21371814,
+      "files": 15,
+      "case_path": "cases/development_transport-normal-631/case.md",
+      "html_path": "cases/development_transport-normal-631/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 424,
+      "role": "成功参照",
+      "reason": "初始粮食盈余为零、没有粮荒损失的短成功轨迹，且成功纠正一次截断JSON；展示场景条件差异。",
+      "episode_id": "development_transport-normal-424",
+      "outcome": "native_success",
+      "env_steps": 6,
+      "api_calls": 8,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-424/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-424/attempt0",
+      "bytes": 16427448,
+      "files": 38,
+      "case_path": "cases/development_transport-normal-424/case.md",
+      "html_path": "cases/development_transport-normal-424/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 329,
+      "role": "动作语义/初始条件",
+      "reason": "初始无运输船；前两次把plant误认为建城，随后移民损失，最后输出失败。",
+      "episode_id": "development_transport-normal-329",
+      "outcome": "output_failure",
+      "env_steps": 10,
+      "api_calls": 18,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-329/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-329/attempt0",
+      "bytes": 27474084,
+      "files": 18,
+      "case_path": "cases/development_transport-normal-329/case.md",
+      "html_path": "cases/development_transport-normal-329/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 665,
+      "role": "协议异常后成功",
+      "reason": "一次finish_reason=stop的最终输出包含多段JSON及额外文本，严格解析失败，纠错后继续并原生成功。",
+      "episode_id": "development_transport-normal-665",
+      "outcome": "native_success",
+      "env_steps": 10,
+      "api_calls": 11,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-665/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-665/attempt0",
+      "bytes": 26128125,
+      "files": 17,
+      "case_path": "cases/development_transport-normal-665/case.md",
+      "html_path": "cases/development_transport-normal-665/index.html"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 999,
+      "role": "未触顶空响应",
+      "reason": "一次finish_reason=stop、5533个思考tokens即返回空内容，纠错后继续，后来才因连续触顶空输出停止；区别两种空响应。",
+      "episode_id": "development_transport-normal-999",
+      "outcome": "output_failure",
+      "env_steps": 5,
+      "api_calls": 9,
+      "remote_trace_path": "/data/ubuntu-home/jianzheli/University/conginitve_reasoning/civrealm-agent-study/runs/development-baseline-v5-20261101/episodes/development_transport-normal-999/attempt0",
+      "local_trace_path": "runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-999/attempt0",
+      "bytes": 15270179,
+      "files": 13,
+      "case_path": "cases/development_transport-normal-999/case.md",
+      "html_path": "cases/development_transport-normal-999/index.html"
+    }
+  ]
+}

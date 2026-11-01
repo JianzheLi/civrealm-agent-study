@@ -2,6 +2,8 @@
 
 根目录 [README](../README.md) 说明当前五任务、每任务 100 局、最新 DeepSeek 模型及三位成员的分工。
 
+两个发展任务的实际运行入口和记录适配见 [development_run.md](development_run.md)。
+
 1. [first_round_analysis.md](first_round_analysis.md)：当前优先阅读，说明轨迹统计、失败案例和五类可视化如何交付。
 2. [tasks/](tasks/README.md) 与 [模板](tasks/TEMPLATE.md)：核实自己任务的原生判定、观察和任务事件。
 3. [interfaces.md](interfaces.md)、[logging_spec.md](logging_spec.md)：统一模块交接和逐步/逐局字段，保留可绘制的地图与事件。

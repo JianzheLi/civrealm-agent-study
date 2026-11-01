@@ -1,0 +1,1830 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>development_transport-normal-976：输出失败</title>
+<style>body{max-width:1100px;margin:32px auto;padding:0 20px;font:16px/1.6 system-ui;color:#172b3a}a{color:#075b9a}video{width:100%;max-height:680px;background:#303846}img{max-width:100%}summary{cursor:pointer;padding:12px;background:#edf3f7}details{margin:10px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f7f9fb;padding:16px;font-size:13px}</style>
+<p><a href="../../index.html">← 返回案例目录</a></p><h1>development_transport-normal-976：输出失败</h1>
+<p>已装载和载运，粮荒损失移民后的恢复阶段又发生连续空输出。</p><p>停止原因：output_failure；动作 10；调用 15。</p>
+<video controls preload="none" src="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/player_visible_replay.mp4"></video>
+<p>玩家可见状态重建，每次决策一帧；不是游戏屏幕录制。下列模型理由是最终简短输出，不是内部思考过程。</p>
+<p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/initial.json">初始观察</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/final.json">最终观察</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/steps.jsonl">完整轨迹</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/api_calls.jsonl">全部请求与输出</a> · <a href="agent_task_instruction.txt">模型当时的任务说明</a></p>
+<img src="progress.png" alt="真实指标进展"><img src="keyframes.png" alt="玩家可见地图关键帧">
+<h2>逐决策证据</h2><details id="d0000"><summary>决策 0000 · 回合 1 · [&#x27;unit&#x27;, 112, &#x27;embark_2_113&#x27;]</summary><p>让一队移民登上三列桨船，准备渡海前往新大陆建城。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0000.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0000&quot;,
+  &quot;env_step&quot;: 1,
+  &quot;turn&quot;: 1,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    112,
+    &quot;embark_2_113&quot;
+  ],
+  &quot;reason&quot;: &quot;让一队移民登上三列桨船，准备渡海前往新大陆建城。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;112&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    },
+    &quot;112&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 113,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 0,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 0,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -2,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 2,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 5,
+      &quot;prod_process&quot;: 0.0
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 0,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 0,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -2,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 2,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 5,
+      &quot;prod_process&quot;: 0.0
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;112&quot;,
+      &quot;before&quot;: 2,
+      &quot;after&quot;: 3
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;112&quot;,
+      &quot;before&quot;: 5,
+      &quot;after&quot;: 4
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;112&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 0
+    },
+    {
+      &quot;type&quot;: &quot;unit_transported&quot;,
+      &quot;id&quot;: &quot;112&quot;,
+      &quot;before&quot;: false,
+      &quot;after&quot;: true
+    },
+    {
+      &quot;type&quot;: &quot;unit_transported_by&quot;,
+      &quot;id&quot;: &quot;112&quot;,
+      &quot;before&quot;: 0,
+      &quot;after&quot;: 113
+    },
+    {
+      &quot;type&quot;: &quot;unit_occupied&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: false,
+      &quot;after&quot;: true
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0000-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:107,\&quot;reason\&quot;:\&quot;让一队移民登上三列桨船，准备渡海前往新大陆建城。\&quot;,\&quot;expected_effect\&quot;:\&quot;移民112进入三列桨船113，随船移动。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 25200,
+      &quot;completion_tokens&quot;: 507,
+      &quot;reasoning_tokens&quot;: 460,
+      &quot;latency_s&quot;: 3.6301541328430176
+    }
+  ]
+}</pre></details><details id="d0001"><summary>决策 0001 · 回合 1 · [&#x27;unit&#x27;, 113, &#x27;goto_2&#x27;]</summary><p>将已载移民的三列桨船向东北移动到可见新大陆旁的海域，靠近可登陆点。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0001.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0001&quot;,
+  &quot;env_step&quot;: 2,
+  &quot;turn&quot;: 1,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    113,
+    &quot;goto_2&quot;
+  ],
+  &quot;reason&quot;: &quot;将已载移民的三列桨船向东北移动到可见新大陆旁的海域，靠近可登陆点。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    },
+    &quot;112&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 113,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 6,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    },
+    &quot;112&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 113,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 0,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 0,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -2,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 2,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 5,
+      &quot;prod_process&quot;: 0.0
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 0,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 0,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -2,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 2,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 5,
+      &quot;prod_process&quot;: 0.0
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;112&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 4
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;112&quot;,
+      &quot;before&quot;: 4,
+      &quot;after&quot;: 3
+    },
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 4
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: 4,
+      &quot;after&quot;: 3
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: 9,
+      &quot;after&quot;: 6
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0001-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:94,\&quot;reason\&quot;:\&quot;将已载移民的三列桨船向东北移动到可见新大陆旁的海域，靠近可登陆点。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 22884,
+      &quot;completion_tokens&quot;: 2223,
+      &quot;reasoning_tokens&quot;: 2190,
+      &quot;latency_s&quot;: 15.519209146499634
+    }
+  ]
+}</pre></details><details id="d0002"><summary>决策 0002 · 回合 1 · [&#x27;unit&#x27;, 111, &#x27;embark_2_114&#x27;]</summary><p>让移民111登上相邻的114号三列桨船，提前装船以便下回合直接登陆新大陆。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0002.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0002&quot;,
+  &quot;env_step&quot;: 3,
+  &quot;turn&quot;: 1,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    111,
+    &quot;embark_2_114&quot;
+  ],
+  &quot;reason&quot;: &quot;让移民111登上相邻的114号三列桨船，提前装船以便下回合直接登陆新大陆。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 6,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    },
+    &quot;112&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 113,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 6,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    },
+    &quot;112&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 113,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 114,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 0,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 0,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -2,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 2,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 5,
+      &quot;prod_process&quot;: 0.0
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 0,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 0,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -2,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 2,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 5,
+      &quot;prod_process&quot;: 0.0
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 2,
+      &quot;after&quot;: 3
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 5,
+      &quot;after&quot;: 4
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 0
+    },
+    {
+      &quot;type&quot;: &quot;unit_occupied&quot;,
+      &quot;id&quot;: &quot;114&quot;,
+      &quot;before&quot;: false,
+      &quot;after&quot;: true
+    },
+    {
+      &quot;type&quot;: &quot;unit_transported&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: false,
+      &quot;after&quot;: true
+    },
+    {
+      &quot;type&quot;: &quot;unit_transported_by&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 0,
+      &quot;after&quot;: 114
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0002-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:106,\&quot;reason\&quot;:\&quot;让移民111登上相邻的114号三列桨船，提前装船以便下回合直接登陆新大陆。\&quot;,\&quot;expected_effect\&quot;:\&quot;移民111变为由114运输。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 23319,
+      &quot;completion_tokens&quot;: 6256,
+      &quot;reasoning_tokens&quot;: 6210,
+      &quot;latency_s&quot;: 37.85544800758362
+    }
+  ]
+}</pre></details><details id="d0003"><summary>决策 0003 · 回合 1 · END_TURN</summary><p>两艘三列桨船已载着移民抵达新大陆旁海域（113在(4,3)，东侧(5,3)为草地），但移民本回合移动力已耗尽。结束回合让移民恢复移动力，下回合登陆并建城。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0003.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0003&quot;,
+  &quot;env_step&quot;: 4,
+  &quot;turn&quot;: 1,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: null,
+  &quot;reason&quot;: &quot;两艘三列桨船已载着移民抵达新大陆旁海域（113在(4,3)，东侧(5,3)为草地），但移民本回合移动力已耗尽。结束回合让移民恢复移动力，下回合登陆并建城。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 6,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    },
+    &quot;112&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 113,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 114,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 114,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 0,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 0,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -2,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 2,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 5,
+      &quot;prod_process&quot;: 0.0
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 2,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 2,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -1,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 3,
+      &quot;prod_process&quot;: 0.2
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_no_longer_observed&quot;,
+      &quot;id&quot;: &quot;112&quot;
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 0,
+      &quot;after&quot;: 3
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: 6,
+      &quot;after&quot;: 9
+    },
+    {
+      &quot;type&quot;: &quot;unit_occupied&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: true,
+      &quot;after&quot;: false
+    }
+  ],
+  &quot;native_notices&quot;: [
+    &quot;Famine feared in Hannover, Settlers lost!&quot;,
+    &quot;Warning: Famine feared in Hannover.&quot;,
+    &quot;Year: 3950 BCE&quot;
+  ],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0003-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;: 143, \&quot;reason\&quot;: \&quot;两艘三列桨船已载着移民抵达新大陆旁海域（113在(4,3)，东侧(5,3)为草地），但移民本回合移动力已耗尽。结束回合让移民恢复移动力，下回合登陆并建城。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 22605,
+      &quot;completion_tokens&quot;: 1461,
+      &quot;reasoning_tokens&quot;: 1391,
+      &quot;latency_s&quot;: 8.506383657455444
+    }
+  ]
+}</pre></details><details id="d0004"><summary>决策 0004 · 回合 2 · [&#x27;unit&#x27;, 111, &#x27;embark_2_113&#x27;]</summary><p>让移民111换乘相邻的113号三列桨船，靠近东侧新大陆草地；下回合可登陆并建城。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0004.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0004&quot;,
+  &quot;env_step&quot;: 5,
+  &quot;turn&quot;: 2,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    111,
+    &quot;embark_2_113&quot;
+  ],
+  &quot;reason&quot;: &quot;让移民111换乘相邻的113号三列桨船，靠近东侧新大陆草地；下回合可登陆并建城。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 114,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 113,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 2,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 2,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -1,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 3,
+      &quot;prod_process&quot;: 0.2
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 2,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 2,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -1,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 3,
+      &quot;prod_process&quot;: 0.2
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 4
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 4,
+      &quot;after&quot;: 3
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 0
+    },
+    {
+      &quot;type&quot;: &quot;unit_transported_by&quot;,
+      &quot;id&quot;: &quot;111&quot;,
+      &quot;before&quot;: 114,
+      &quot;after&quot;: 113
+    },
+    {
+      &quot;type&quot;: &quot;unit_occupied&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: false,
+      &quot;after&quot;: true
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0004-call0&quot;,
+      &quot;error&quot;: &quot;Expecting value: line 1 column 1 (char 0)&quot;
+    }
+  ],
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0004-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;length&quot;,
+      &quot;content&quot;: &quot;&quot;,
+      &quot;prompt_tokens&quot;: 23546,
+      &quot;completion_tokens&quot;: 8192,
+      &quot;reasoning_tokens&quot;: 8192,
+      &quot;latency_s&quot;: 44.56293749809265
+    },
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0004-call1&quot;,
+      &quot;purpose&quot;: &quot;correction&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;: 101, \&quot;reason\&quot;: \&quot;让移民111换乘相邻的113号三列桨船，靠近东侧新大陆草地；下回合可登陆并建城。\&quot;, \&quot;expected_effect\&quot;: \&quot;移民111登上113号船，移至(4,3)附近。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 23578,
+      &quot;completion_tokens&quot;: 1060,
+      &quot;reasoning_tokens&quot;: 996,
+      &quot;latency_s&quot;: 6.549569845199585
+    }
+  ]
+}</pre></details><details id="d0005"><summary>决策 0005 · 回合 2 · END_TURN</summary><p>移民已载于113号船且紧邻东侧草地，但其本回合移动力耗尽。结束回合以恢复移动力，下回合即可登陆建城。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0005.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0005&quot;,
+  &quot;env_step&quot;: 6,
+  &quot;turn&quot;: 2,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: null,
+  &quot;reason&quot;: &quot;移民已载于113号船且紧邻东侧草地，但其本回合移动力耗尽。结束回合以恢复移动力，下回合即可登陆建城。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    },
+    &quot;111&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: true,
+      &quot;transported_by&quot;: 113,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: true
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 2,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 2,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: -1,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 3,
+      &quot;prod_process&quot;: 0.2
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 2,
+      &quot;prod_process&quot;: 0.5
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_no_longer_observed&quot;,
+      &quot;id&quot;: &quot;111&quot;
+    },
+    {
+      &quot;type&quot;: &quot;unit_occupied&quot;,
+      &quot;id&quot;: &quot;114&quot;,
+      &quot;before&quot;: true,
+      &quot;after&quot;: false
+    },
+    {
+      &quot;type&quot;: &quot;unit_occupied&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: true,
+      &quot;after&quot;: false
+    }
+  ],
+  &quot;native_notices&quot;: [
+    &quot;Famine feared in Hannover, Settlers lost!&quot;,
+    &quot;Year: 3900 BCE&quot;
+  ],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0005-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:144,\&quot;reason\&quot;:\&quot;移民已载于113号船且紧邻东侧草地，但其本回合移动力耗尽。结束回合以恢复移动力，下回合即可登陆建城。\&quot;,\&quot;expected_effect\&quot;:\&quot;回合结束后移民恢复移动力，113号船仍位于新大陆旁的(4,3)海域。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 22710,
+      &quot;completion_tokens&quot;: 386,
+      &quot;reasoning_tokens&quot;: 314,
+      &quot;latency_s&quot;: 2.8682987689971924
+    }
+  ]
+}</pre></details><details id="d0006"><summary>决策 0006 · 回合 3 · [&#x27;city&#x27;, 110, &#x27;produce_Settlers&#x27;]</summary><p>原移民已损失，哈诺威改产新移民以继续执行登陆建城任务。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0006.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0006&quot;,
+  &quot;env_step&quot;: 7,
+  &quot;turn&quot;: 3,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;city&quot;,
+    110,
+    &quot;produce_Settlers&quot;
+  ],
+  &quot;reason&quot;: &quot;原移民已损失，哈诺威改产新移民以继续执行登陆建城任务。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 2,
+      &quot;prod_process&quot;: 0.5
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 68,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 12,
+      &quot;prod_process&quot;: 0.125
+    }
+  },
+  &quot;state_changes&quot;: [],
+  &quot;native_notices&quot;: [
+    &quot;Hannover is building Settlers.&quot;
+  ],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0006-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:2,\&quot;reason\&quot;:\&quot;原移民已损失，哈诺威改产新移民以继续执行登陆建城任务。\&quot;,\&quot;expected_effect\&quot;:\&quot;城市开始生产新的移民单位\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 21762,
+      &quot;completion_tokens&quot;: 2177,
+      &quot;reasoning_tokens&quot;: 2136,
+      &quot;latency_s&quot;: 14.767966985702515
+    }
+  ]
+}</pre></details><details id="d0007"><summary>决策 0007 · 回合 3 · [&#x27;unit&#x27;, 114, &#x27;goto_6&#x27;]</summary><p>114号三列桨船向南靠近哈诺威，准备接运新生产的移民并可能入城加速生产。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0007.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0007&quot;,
+  &quot;env_step&quot;: 8,
+  &quot;turn&quot;: 3,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    114,
+    &quot;goto_6&quot;
+  ],
+  &quot;reason&quot;: &quot;114号三列桨船向南靠近哈诺威，准备接运新生产的移民并可能入城加速生产。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 6,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 68,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 12,
+      &quot;prod_process&quot;: 0.125
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 68,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 12,
+      &quot;prod_process&quot;: 0.125
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;114&quot;,
+      &quot;before&quot;: 4,
+      &quot;after&quot;: 5
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;114&quot;,
+      &quot;before&quot;: 9,
+      &quot;after&quot;: 6
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0007-call0&quot;,
+      &quot;error&quot;: &quot;Expecting value: line 1 column 1 (char 0)&quot;
+    }
+  ],
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0007-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;length&quot;,
+      &quot;content&quot;: &quot;&quot;,
+      &quot;prompt_tokens&quot;: 21567,
+      &quot;completion_tokens&quot;: 8192,
+      &quot;reasoning_tokens&quot;: 8192,
+      &quot;latency_s&quot;: 50.979482650756836
+    },
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0007-call1&quot;,
+      &quot;purpose&quot;: &quot;correction&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:104,\&quot;reason\&quot;:\&quot;114号三列桨船向南靠近哈诺威，准备接运新生产的移民并可能入城加速生产。\&quot;,\&quot;expected_effect\&quot;:\&quot;114号船移动到(3,5)海域，更接近哈诺威。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 21599,
+      &quot;completion_tokens&quot;: 3721,
+      &quot;reasoning_tokens&quot;: 3664,
+      &quot;latency_s&quot;: 23.864524602890015
+    }
+  ]
+}</pre></details><details id="d0008"><summary>决策 0008 · 回合 3 · [&#x27;unit&#x27;, 114, &#x27;goto_5&#x27;]</summary><p>让114号三列桨船先驶入哈诺威，准备随后解散以加速移民生产，同时为运输保留113号船。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0008.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0008&quot;,
+  &quot;env_step&quot;: 9,
+  &quot;turn&quot;: 3,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    114,
+    &quot;goto_5&quot;
+  ],
+  &quot;reason&quot;: &quot;让114号三列桨船先驶入哈诺威，准备随后解散以加速移民生产，同时为运输保留113号船。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 6,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 6,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 68,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 12,
+      &quot;prod_process&quot;: 0.125
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 68,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 12,
+      &quot;prod_process&quot;: 0.125
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;114&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 2
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;114&quot;,
+      &quot;before&quot;: 5,
+      &quot;after&quot;: 6
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;114&quot;,
+      &quot;before&quot;: 6,
+      &quot;after&quot;: 3
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0008-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;: 103, \&quot;reason\&quot;: \&quot;让114号三列桨船先驶入哈诺威，准备随后解散以加速移民生产，同时为运输保留113号船。\&quot;, \&quot;expected_effect\&quot;: \&quot;114号船进入哈诺威城。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 21441,
+      &quot;completion_tokens&quot;: 5894,
+      &quot;reasoning_tokens&quot;: 5835,
+      &quot;latency_s&quot;: 40.20248079299927
+    }
+  ]
+}</pre></details><details id="d0009"><summary>决策 0009 · 回合 3 · [&#x27;unit&#x27;, 113, &#x27;goto_5&#x27;]</summary><p>将113号三列桨船驶向哈诺威，准备入城解散以加速移民生产。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0009.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0009&quot;,
+  &quot;env_step&quot;: 10,
+  &quot;turn&quot;: 3,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    113,
+    &quot;goto_5&quot;
+  ],
+  &quot;reason&quot;: &quot;将113号三列桨船驶向哈诺威，准备入城解散以加速移民生产。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 3,
+      &quot;moves_left&quot;: 9,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 6,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 6,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 6,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 68,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 12,
+      &quot;prod_process&quot;: 0.125
+    }
+  },
+  &quot;after_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 68,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 12,
+      &quot;prod_process&quot;: 0.125
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: 4,
+      &quot;after&quot;: 3
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 4
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;113&quot;,
+      &quot;before&quot;: 9,
+      &quot;after&quot;: 6
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0009-call0&quot;,
+      &quot;error&quot;: &quot;Expecting value: line 1 column 1 (char 0)&quot;
+    }
+  ],
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0009-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;length&quot;,
+      &quot;content&quot;: &quot;&quot;,
+      &quot;prompt_tokens&quot;: 21187,
+      &quot;completion_tokens&quot;: 8192,
+      &quot;reasoning_tokens&quot;: 8192,
+      &quot;latency_s&quot;: 50.74808168411255
+    },
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0009-call1&quot;,
+      &quot;purpose&quot;: &quot;correction&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;: 95, \&quot;reason\&quot;: \&quot;将113号三列桨船驶向哈诺威，准备入城解散以加速移民生产。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 21219,
+      &quot;completion_tokens&quot;: 4781,
+      &quot;reasoning_tokens&quot;: 4746,
+      &quot;latency_s&quot;: 30.573282957077026
+    }
+  ]
+}</pre></details><details id="d0010"><summary>决策 0010 · 回合 3 · 未提交动作</summary><p>没有可执行的最终输出</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_transport-normal-976/attempt0/decision_0010.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_transport-normal-976-attempt0-decision0010&quot;,
+  &quot;env_step&quot;: null,
+  &quot;turn&quot;: 3,
+  &quot;action_submitted&quot;: false,
+  &quot;native_action&quot;: null,
+  &quot;reason&quot;: null,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;mini_score&quot;: 0,
+    &quot;mini_goal&quot;: 1,
+    &quot;max_turn&quot;: 10,
+    &quot;used_turn&quot;: 1.0,
+    &quot;is_mini_success&quot;: -1
+  },
+  &quot;after_metrics&quot;: null,
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;113&quot;: {
+      &quot;x&quot;: 3,
+      &quot;y&quot;: 4,
+      &quot;moves_left&quot;: 6,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    },
+    &quot;114&quot;: {
+      &quot;x&quot;: 2,
+      &quot;y&quot;: 6,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 10,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: null,
+  &quot;before_cities&quot;: {
+    &quot;110&quot;: {
+      &quot;name&quot;: &quot;Hannover&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 68,
+      &quot;shield_stock&quot;: 5,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 3,
+      &quot;prod_food&quot;: 2,
+      &quot;surplus_food&quot;: 0,
+      &quot;prod_gold&quot;: 1,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 2,
+      &quot;turns_to_prod_complete&quot;: 12,
+      &quot;prod_process&quot;: 0.125
+    }
+  },
+  &quot;after_cities&quot;: null,
+  &quot;state_changes&quot;: null,
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0010-call0&quot;,
+      &quot;error&quot;: &quot;Expecting value: line 1 column 1 (char 0)&quot;
+    },
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0010-call1&quot;,
+      &quot;error&quot;: &quot;Expecting value: line 1 column 1 (char 0)&quot;
+    }
+  ],
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0010-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;length&quot;,
+      &quot;content&quot;: &quot;&quot;,
+      &quot;prompt_tokens&quot;: 21205,
+      &quot;completion_tokens&quot;: 8192,
+      &quot;reasoning_tokens&quot;: 8192,
+      &quot;latency_s&quot;: 48.00826954841614
+    },
+    {
+      &quot;call_id&quot;: &quot;development_transport-normal-976-attempt0-decision0010-call1&quot;,
+      &quot;purpose&quot;: &quot;correction&quot;,
+      &quot;finish_reason&quot;: &quot;length&quot;,
+      &quot;content&quot;: &quot;&quot;,
+      &quot;prompt_tokens&quot;: 21237,
+      &quot;completion_tokens&quot;: 8192,
+      &quot;reasoning_tokens&quot;: 8192,
+      &quot;latency_s&quot;: 52.57917046546936
+    }
+  ]
+}</pre></details></html>

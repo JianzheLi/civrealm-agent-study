@@ -1,6 +1,6 @@
 # 模块与日志接口
 
-_设计契约，尚未实现为 Python 类。可以采用数据类或字典；字段语义须一致。_
+_接口以字典记录实现于 src/civstudy；两个发展任务先使用这些语义。_
 
 详细记录、计数和存储规范以 [logging_spec.md](logging_spec.md) 为准。这里说明环境、Agent、执行器与记录模块之间交接什么。
 
@@ -34,6 +34,8 @@ runner 汇总任务、场景清单与划分、代码/提示词/方法版本、�
 | resource_context | 本局剩余环境步数、已用调用和耗时；没有虚构的剩余 API 次数 |
 
 动作编号只对当前映射有效。输入整理后实际发送给模型的 messages 也要保存，不能仅保存整理前的完整观察。
+
+当前实现从标准观察提取可见状态，科技的 sup_units/sup_improvements 用名称列表表达，完整定义保留在原始观察。标准观察没有装载关系，故另外记录我方已可见单位的 transported、transported_by、occupied。独立 SDK 保留跨回合通知列表（原版每回合清空，不能配合累计游标）。通用玩家通知保存为 native_messages_before/after；模型收到当前新增通知与最近四次动作反馈，Lua 指标事件仍单独保留。聊天通过 Decision.chat 提交，不作为 env.step 菜单动作。
 
 ## Decision：Agent 返回
 

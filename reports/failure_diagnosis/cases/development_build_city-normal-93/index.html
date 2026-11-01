@@ -1,0 +1,767 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>development_build_city-normal-93：成功参照</title>
+<style>body{max-width:1100px;margin:32px auto;padding:0 20px;font:16px/1.6 system-ui;color:#172b3a}a{color:#075b9a}video{width:100%;max-height:680px;background:#303846}img{max-width:100%}summary{cursor:pointer;padding:12px;background:#edf3f7}details{margin:10px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f7f9fb;padding:16px;font-size:13px}</style>
+<p><a href="../../index.html">← 返回案例目录</a></p><h1>development_build_city-normal-93：成功参照</h1>
+<p>达到目标后因移动力为零合法等待，再就地建城；避免将合理等待误标为拖延。</p><p>停止原因：native_success；动作 7；调用 7。</p>
+<video controls preload="none" src="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/player_visible_replay.mp4"></video>
+<p>玩家可见状态重建，每次决策一帧；不是游戏屏幕录制。下列模型理由是最终简短输出，不是内部思考过程。</p>
+<p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/initial.json">初始观察</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/final.json">最终观察</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/steps.jsonl">完整轨迹</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/api_calls.jsonl">全部请求与输出</a> · <a href="agent_task_instruction.txt">模型当时的任务说明</a></p>
+<img src="progress.png" alt="真实指标进展"><img src="keyframes.png" alt="玩家可见地图关键帧">
+<h2>逐决策证据</h2><details id="d0000"><summary>决策 0000 · 回合 1 · [&#x27;unit&#x27;, 101, &#x27;goto_1&#x27;]</summary><p>向北移动，接近已知的皮毛资源点，争取在更富饶的地块建城，使城市评分超过目标。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/decision_0000.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0000&quot;,
+  &quot;env_step&quot;: 1,
+  &quot;turn&quot;: 1,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    101,
+    &quot;goto_1&quot;
+  ],
+  &quot;reason&quot;: &quot;向北移动，接近已知的皮毛资源点，争取在更富饶的地块建城，使城市评分超过目标。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 9,
+    &quot;y&quot;: 8,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 9,
+    &quot;y&quot;: 7,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;legal_build_city&quot;: true,
+  &quot;before_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 9,
+      &quot;y&quot;: 8,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 9,
+      &quot;y&quot;: 7,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {},
+  &quot;after_cities&quot;: {},
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 8,
+      &quot;after&quot;: 7
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 0
+    }
+  ],
+  &quot;native_notices&quot;: [
+    &quot; No action probability query needed.&quot;
+  ],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0000-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:92,\&quot;reason\&quot;:\&quot;向北移动，接近已知的皮毛资源点，争取在更富饶的地块建城，使城市评分超过目标。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 18408,
+      &quot;completion_tokens&quot;: 3314,
+      &quot;reasoning_tokens&quot;: 3278,
+      &quot;latency_s&quot;: 21.295629262924194
+    }
+  ]
+}</pre></details><details id="d0001"><summary>决策 0001 · 回合 1 · END_TURN</summary><p>移民已耗尽移动力，当前地块评分5.4低于目标6.2；结束回合恢复移动力，随后前往更富饶的(8,6)冻土地块建城。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/decision_0001.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0001&quot;,
+  &quot;env_step&quot;: 2,
+  &quot;turn&quot;: 1,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: null,
+  &quot;reason&quot;: &quot;移民已耗尽移动力，当前地块评分5.4低于目标6.2；结束回合恢复移动力，随后前往更富饶的(8,6)冻土地块建城。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 9,
+    &quot;y&quot;: 7,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 9,
+    &quot;y&quot;: 7,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 9,
+      &quot;y&quot;: 7,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 9,
+      &quot;y&quot;: 7,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {},
+  &quot;after_cities&quot;: {},
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 0,
+      &quot;after&quot;: 3
+    }
+  ],
+  &quot;native_notices&quot;: [
+    &quot;Year: 3950 BCE&quot;
+  ],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0001-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:124,\&quot;reason\&quot;:\&quot;移民已耗尽移动力，当前地块评分5.4低于目标6.2；结束回合恢复移动力，随后前往更富饶的(8,6)冻土地块建城。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 16480,
+      &quot;completion_tokens&quot;: 566,
+      &quot;reasoning_tokens&quot;: 515,
+      &quot;latency_s&quot;: 4.460487365722656
+    }
+  ]
+}</pre></details><details id="d0002"><summary>决策 0002 · 回合 2 · [&#x27;unit&#x27;, 101, &#x27;goto_0&#x27;]</summary><p>当前地块评分仅5.4，低于目标6.2；向西北移动到已知的皮毛冻土地块，以其丰富资源提高建城评分。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/decision_0002.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0002&quot;,
+  &quot;env_step&quot;: 3,
+  &quot;turn&quot;: 2,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    101,
+    &quot;goto_0&quot;
+  ],
+  &quot;reason&quot;: &quot;当前地块评分仅5.4，低于目标6.2；向西北移动到已知的皮毛冻土地块，以其丰富资源提高建城评分。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 9,
+    &quot;y&quot;: 7,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 8,
+    &quot;y&quot;: 6,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;legal_build_city&quot;: true,
+  &quot;before_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 9,
+      &quot;y&quot;: 7,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 8,
+      &quot;y&quot;: 6,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {},
+  &quot;after_cities&quot;: {},
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 9,
+      &quot;after&quot;: 8
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 7,
+      &quot;after&quot;: 6
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 0
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0002-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;: 91, \&quot;reason\&quot;: \&quot;当前地块评分仅5.4，低于目标6.2；向西北移动到已知的皮毛冻土地块，以其丰富资源提高建城评分。\&quot;, \&quot;expected_effect\&quot;: \&quot;移民移动到(8,6)皮毛冻土，下一回合可在此建城。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 17633,
+      &quot;completion_tokens&quot;: 537,
+      &quot;reasoning_tokens&quot;: 467,
+      &quot;latency_s&quot;: 3.910080671310425
+    }
+  ]
+}</pre></details><details id="d0003"><summary>决策 0003 · 回合 2 · END_TURN</summary><p>移民移动力已耗尽，当前地块评分5.4低于目标6.2，先结束回合恢复移动力，再前往更高评分地块建城。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/decision_0003.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0003&quot;,
+  &quot;env_step&quot;: 4,
+  &quot;turn&quot;: 2,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: null,
+  &quot;reason&quot;: &quot;移民移动力已耗尽，当前地块评分5.4低于目标6.2，先结束回合恢复移动力，再前往更高评分地块建城。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 8,
+    &quot;y&quot;: 6,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 8,
+    &quot;y&quot;: 6,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 8,
+      &quot;y&quot;: 6,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 8,
+      &quot;y&quot;: 6,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {},
+  &quot;after_cities&quot;: {},
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 0,
+      &quot;after&quot;: 3
+    }
+  ],
+  &quot;native_notices&quot;: [
+    &quot; No action probability query needed.&quot;,
+    &quot;Year: 3900 BCE&quot;
+  ],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0003-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:124,\&quot;reason\&quot;:\&quot;移民移动力已耗尽，当前地块评分5.4低于目标6.2，先结束回合恢复移动力，再前往更高评分地块建城。\&quot;,\&quot;expected_effect\&quot;:\&quot;回合结束，移民恢复3点移动力。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 17665,
+      &quot;completion_tokens&quot;: 529,
+      &quot;reasoning_tokens&quot;: 471,
+      &quot;latency_s&quot;: 3.6589672565460205
+    }
+  ]
+}</pre></details><details id="d0004"><summary>决策 0004 · 回合 3 · [&#x27;unit&#x27;, 101, &#x27;goto_0&#x27;]</summary><p>当前评分5.4仍低于目标6.2，向西北探索未知区域，寻找包含更多资源的建城点。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/decision_0004.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0004&quot;,
+  &quot;env_step&quot;: 5,
+  &quot;turn&quot;: 3,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    101,
+    &quot;goto_0&quot;
+  ],
+  &quot;reason&quot;: &quot;当前评分5.4仍低于目标6.2，向西北探索未知区域，寻找包含更多资源的建城点。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 8,
+    &quot;y&quot;: 6,
+    &quot;mini_score&quot;: 5.4,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 7,
+    &quot;y&quot;: 5,
+    &quot;mini_score&quot;: 6.2,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;legal_build_city&quot;: true,
+  &quot;before_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 8,
+      &quot;y&quot;: 6,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 7,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {},
+  &quot;after_cities&quot;: {},
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_x&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 8,
+      &quot;after&quot;: 7
+    },
+    {
+      &quot;type&quot;: &quot;unit_y&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 6,
+      &quot;after&quot;: 5
+    },
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 3,
+      &quot;after&quot;: 0
+    }
+  ],
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0004-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;:90,\&quot;reason\&quot;:\&quot;当前评分5.4仍低于目标6.2，向西北探索未知区域，寻找包含更多资源的建城点。\&quot;,\&quot;expected_effect\&quot;:\&quot;移民移动到(7,5)丘陵并揭示西北方未知地块。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 18917,
+      &quot;completion_tokens&quot;: 5384,
+      &quot;reasoning_tokens&quot;: 5328,
+      &quot;latency_s&quot;: 35.26569604873657
+    }
+  ]
+}</pre></details><details id="d0005"><summary>决策 0005 · 回合 3 · END_TURN</summary><p>当前位于(7,5)评分6.2已达标，但移民移动力为0无法建城；结束回合恢复移动力，下回合就地建城。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/decision_0005.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0005&quot;,
+  &quot;env_step&quot;: 6,
+  &quot;turn&quot;: 3,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: null,
+  &quot;reason&quot;: &quot;当前位于(7,5)评分6.2已达标，但移民移动力为0无法建城；结束回合恢复移动力，下回合就地建城。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 7,
+    &quot;y&quot;: 5,
+    &quot;mini_score&quot;: 6.2,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 7,
+    &quot;y&quot;: 5,
+    &quot;mini_score&quot;: 6.2,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;legal_build_city&quot;: false,
+  &quot;before_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 7,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 0,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 7,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;before_cities&quot;: {},
+  &quot;after_cities&quot;: {},
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_moves_left&quot;,
+      &quot;id&quot;: &quot;101&quot;,
+      &quot;before&quot;: 0,
+      &quot;after&quot;: 3
+    }
+  ],
+  &quot;native_notices&quot;: [
+    &quot; No action probability query needed.&quot;,
+    &quot;Year: 3850 BCE&quot;
+  ],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0005-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;: 124, \&quot;reason\&quot;: \&quot;当前位于(7,5)评分6.2已达标，但移民移动力为0无法建城；结束回合恢复移动力，下回合就地建城。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 18644,
+      &quot;completion_tokens&quot;: 506,
+      &quot;reasoning_tokens&quot;: 457,
+      &quot;latency_s&quot;: 3.2775092124938965
+    }
+  ]
+}</pre></details><details id="d0006"><summary>决策 0006 · 回合 4 · [&#x27;unit&#x27;, 101, &#x27;build_city&#x27;]</summary><p>当前位于(7,5)，评分6.2已达到目标6.2，且移动力充足，立即就地建城以达成任务。</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-93/attempt0/decision_0006.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0006&quot;,
+  &quot;env_step&quot;: 7,
+  &quot;turn&quot;: 4,
+  &quot;action_submitted&quot;: true,
+  &quot;native_action&quot;: [
+    &quot;unit&quot;,
+    101,
+    &quot;build_city&quot;
+  ],
+  &quot;reason&quot;: &quot;当前位于(7,5)，评分6.2已达到目标6.2，且移动力充足，立即就地建城以达成任务。&quot;,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 7,
+    &quot;y&quot;: 5,
+    &quot;mini_score&quot;: 6.2,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;after_metrics&quot;: {
+    &quot;status&quot;: 1,
+    &quot;success&quot;: 1,
+    &quot;city_id&quot;: 102,
+    &quot;x&quot;: 7,
+    &quot;y&quot;: 5,
+    &quot;mini_score&quot;: 6.2,
+    &quot;mini_goal&quot;: 6.2,
+    &quot;max_turn&quot;: 30,
+    &quot;is_mini_success&quot;: 1
+  },
+  &quot;legal_build_city&quot;: true,
+  &quot;before_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 7,
+      &quot;y&quot;: 5,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: {},
+  &quot;before_cities&quot;: {},
+  &quot;after_cities&quot;: {
+    &quot;102&quot;: {
+      &quot;name&quot;: &quot;Weimar&quot;,
+      &quot;owner&quot;: 0,
+      &quot;size&quot;: 1,
+      &quot;food_stock&quot;: 0,
+      &quot;production_kind&quot;: 6,
+      &quot;production_value&quot;: 71,
+      &quot;shield_stock&quot;: 0,
+      &quot;disbanded_shields&quot;: 0,
+      &quot;caravan_shields&quot;: 0,
+      &quot;last_turns_shield_surplus&quot;: 0,
+      &quot;prod_food&quot;: 4,
+      &quot;surplus_food&quot;: 2,
+      &quot;prod_gold&quot;: 0,
+      &quot;prod_shield&quot;: 3,
+      &quot;surplus_shield&quot;: 3,
+      &quot;prod_trade&quot;: 0,
+      &quot;turns_to_prod_complete&quot;: 4,
+      &quot;prod_process&quot;: 0.0
+    }
+  },
+  &quot;state_changes&quot;: [
+    {
+      &quot;type&quot;: &quot;unit_no_longer_observed&quot;,
+      &quot;id&quot;: &quot;101&quot;
+    },
+    {
+      &quot;type&quot;: &quot;city_appeared&quot;,
+      &quot;id&quot;: &quot;102&quot;,
+      &quot;state&quot;: {
+        &quot;name&quot;: &quot;Weimar&quot;,
+        &quot;id&quot;: 102,
+        &quot;owner&quot;: 0,
+        &quot;size&quot;: 1,
+        &quot;x&quot;: 7,
+        &quot;y&quot;: 5,
+        &quot;food_stock&quot;: 0,
+        &quot;granary_size&quot;: 20,
+        &quot;granary_turns&quot;: 10,
+        &quot;production_kind&quot;: 6,
+        &quot;production_value&quot;: 71,
+        &quot;city_radius_sq&quot;: 5,
+        &quot;buy_cost&quot;: 50,
+        &quot;shield_stock&quot;: 0,
+        &quot;disbanded_shields&quot;: 0,
+        &quot;caravan_shields&quot;: 0,
+        &quot;last_turns_shield_surplus&quot;: 0,
+        &quot;can_build_unit&quot;: [
+          true,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        &quot;improvements&quot;: [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        &quot;turn_last_built&quot;: 4,
+        &quot;luxury&quot;: 0,
+        &quot;science&quot;: 0,
+        &quot;prod_food&quot;: 4,
+        &quot;surplus_food&quot;: 2,
+        &quot;prod_gold&quot;: 0,
+        &quot;surplus_gold&quot;: 0,
+        &quot;prod_shield&quot;: 3,
+        &quot;surplus_shield&quot;: 3,
+        &quot;prod_trade&quot;: 0,
+        &quot;surplus_trade&quot;: 0,
+        &quot;bulbs&quot;: 3,
+        &quot;city_waste&quot;: 0,
+        &quot;city_corruption&quot;: 0,
+        &quot;city_pollution&quot;: 0,
+        &quot;state&quot;: 2,
+        &quot;growth_in&quot;: &quot;10 turns&quot;,
+        &quot;turns_to_prod_complete&quot;: 4,
+        &quot;prod_process&quot;: 0.0,
+        &quot;ppl_angry&quot;: 0,
+        &quot;ppl_unhappy&quot;: 0,
+        &quot;ppl_content&quot;: 1,
+        &quot;ppl_happy&quot;: 0
+      }
+    }
+  ],
+  &quot;native_notices&quot;: [
+    &quot;You have founded Weimar.&quot;,
+    &quot;You scored 6.2&gt;=6.2, congratulations on the successful completion of this mission!&quot;,
+    &quot; No action probability query needed.&quot;
+  ],
+  &quot;output_errors&quot;: null,
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-93-attempt0-decision0006-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;stop&quot;,
+      &quot;content&quot;: &quot;{\&quot;action_id\&quot;: 90, \&quot;reason\&quot;: \&quot;当前位于(7,5)，评分6.2已达到目标6.2，且移动力充足，立即就地建城以达成任务。\&quot;, \&quot;expected_effect\&quot;: \&quot;建立城市，评分6.2达到目标，任务成功。\&quot;}&quot;,
+      &quot;prompt_tokens&quot;: 19615,
+      &quot;completion_tokens&quot;: 111,
+      &quot;reasoning_tokens&quot;: 48,
+      &quot;latency_s&quot;: 0.9318215847015381
+    }
+  ]
+}</pre></details></html>

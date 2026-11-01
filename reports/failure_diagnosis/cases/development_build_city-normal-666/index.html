@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>development_build_city-normal-666：输出失败</title>
+<style>body{max-width:1100px;margin:32px auto;padding:0 20px;font:16px/1.6 system-ui;color:#172b3a}a{color:#075b9a}video{width:100%;max-height:680px;background:#303846}img{max-width:100%}summary{cursor:pointer;padding:12px;background:#edf3f7}details{margin:10px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f7f9fb;padding:16px;font-size:13px}</style>
+<p><a href="../../index.html">← 返回案例目录</a></p><h1>development_build_city-normal-666：输出失败</h1>
+<p>零环境动作即停止，隔离展示输出问题不能被归因于错误游戏操作。</p><p>停止原因：output_failure；动作 0；调用 2。</p>
+<video controls preload="none" src="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0/player_visible_replay.mp4"></video>
+<p>玩家可见状态重建，每次决策一帧；不是游戏屏幕录制。下列模型理由是最终简短输出，不是内部思考过程。</p>
+<p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0/initial.json">初始观察</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0/final.json">最终观察</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0/steps.jsonl">完整轨迹</a> · <a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0/api_calls.jsonl">全部请求与输出</a> · <a href="agent_task_instruction.txt">模型当时的任务说明</a></p>
+<img src="progress.png" alt="真实指标进展"><img src="keyframes.png" alt="玩家可见地图关键帧">
+<h2>逐决策证据</h2><details id="d0000"><summary>决策 0000 · 回合 1 · 未提交动作</summary><p>没有可执行的最终输出</p><p><a href="../../../../runs/local_review/development-baseline-v5-20261101/episodes/development_build_city-normal-666/attempt0/decision_0000.json">完整决策记录（观察、实际请求、合法菜单与前后状态）</a></p><pre>{
+  &quot;decision_id&quot;: &quot;development_build_city-normal-666-attempt0-decision0000&quot;,
+  &quot;env_step&quot;: null,
+  &quot;turn&quot;: 1,
+  &quot;action_submitted&quot;: false,
+  &quot;native_action&quot;: null,
+  &quot;reason&quot;: null,
+  &quot;before_metrics&quot;: {
+    &quot;status&quot;: 0,
+    &quot;success&quot;: -1,
+    &quot;x&quot;: 4,
+    &quot;y&quot;: 8,
+    &quot;mini_score&quot;: 4.4,
+    &quot;mini_goal&quot;: 6.0,
+    &quot;is_mini_success&quot;: -1,
+    &quot;max_turn&quot;: 30
+  },
+  &quot;after_metrics&quot;: null,
+  &quot;legal_build_city&quot;: true,
+  &quot;before_units&quot;: {
+    &quot;101&quot;: {
+      &quot;x&quot;: 4,
+      &quot;y&quot;: 8,
+      &quot;moves_left&quot;: 3,
+      &quot;health&quot;: 20,
+      &quot;transported&quot;: false,
+      &quot;transported_by&quot;: 0,
+      &quot;occupied&quot;: false
+    }
+  },
+  &quot;after_units&quot;: null,
+  &quot;before_cities&quot;: {},
+  &quot;after_cities&quot;: null,
+  &quot;state_changes&quot;: null,
+  &quot;native_notices&quot;: [],
+  &quot;output_errors&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-666-attempt0-decision0000-call0&quot;,
+      &quot;error&quot;: &quot;Expecting value: line 1 column 1 (char 0)&quot;
+    },
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-666-attempt0-decision0000-call1&quot;,
+      &quot;error&quot;: &quot;Expecting value: line 1 column 1 (char 0)&quot;
+    }
+  ],
+  &quot;calls&quot;: [
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-666-attempt0-decision0000-call0&quot;,
+      &quot;purpose&quot;: &quot;decision&quot;,
+      &quot;finish_reason&quot;: &quot;length&quot;,
+      &quot;content&quot;: &quot;&quot;,
+      &quot;prompt_tokens&quot;: 18494,
+      &quot;completion_tokens&quot;: 8192,
+      &quot;reasoning_tokens&quot;: 8192,
+      &quot;latency_s&quot;: 49.4099702835083
+    },
+    {
+      &quot;call_id&quot;: &quot;development_build_city-normal-666-attempt0-decision0000-call1&quot;,
+      &quot;purpose&quot;: &quot;correction&quot;,
+      &quot;finish_reason&quot;: &quot;length&quot;,
+      &quot;content&quot;: &quot;&quot;,
+      &quot;prompt_tokens&quot;: 18526,
+      &quot;completion_tokens&quot;: 8192,
+      &quot;reasoning_tokens&quot;: 8192,
+      &quot;latency_s&quot;: 50.33022379875183
+    }
+  ]
+}</pre></details></html>

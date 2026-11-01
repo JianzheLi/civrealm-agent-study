@@ -1,0 +1,1226 @@
+[
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0000",
+    "env_step": 1,
+    "turn": 1,
+    "action_submitted": true,
+    "native_action": [
+      "unit",
+      101,
+      "goto_3"
+    ],
+    "reason": "当前选址评分5.2低于目标6.0，先向西移动到相邻丘陵，靠近煤和鱼资源，观察新位置评分。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 11,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": true,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 11,
+        "y": 5,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_x",
+        "id": "101",
+        "before": 12,
+        "after": 11
+      },
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "native_notices": [
+      " No action probability query needed."
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0000-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":94,\"reason\":\"当前选址评分5.2低于目标6.0，先向西移动到相邻丘陵，靠近煤和鱼资源，观察新位置评分。\",\"expected_effect\":\"定居者移动到(11,5)丘陵，获得新的城市选址评分。\"}",
+        "prompt_tokens": 18512,
+        "completion_tokens": 4566,
+        "reasoning_tokens": 4506,
+        "latency_s": 28.60476541519165
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0001",
+    "env_step": 2,
+    "turn": 1,
+    "action_submitted": true,
+    "native_action": null,
+    "reason": "当前拓荒者移动力为0，无法移动或建城；先结束回合恢复移动力，下回合再寻找评分≥6.0的建城位置。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 11,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 11,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": false,
+    "before_units": {
+      "101": {
+        "x": 11,
+        "y": 5,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 11,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 0,
+        "after": 3
+      }
+    ],
+    "native_notices": [
+      "Year: 3950 BCE"
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0001-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":124,\"reason\":\"当前拓荒者移动力为0，无法移动或建城；先结束回合恢复移动力，下回合再寻找评分≥6.0的建城位置。\"}",
+        "prompt_tokens": 16482,
+        "completion_tokens": 388,
+        "reasoning_tokens": 342,
+        "latency_s": 3.091461658477783
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0002",
+    "env_step": 3,
+    "turn": 2,
+    "action_submitted": true,
+    "native_action": [
+      "unit",
+      101,
+      "goto_4"
+    ],
+    "reason": "当前选址评分5.2低于目标6.0；向东移动可接近煤资源并继续探索东部未知区域，观察相邻丘陵的评分。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 11,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": true,
+    "before_units": {
+      "101": {
+        "x": 11,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_x",
+        "id": "101",
+        "before": 11,
+        "after": 12
+      },
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "native_notices": [
+      " No action probability query needed."
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0002-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":94,\"reason\":\"当前选址评分5.2低于目标6.0；向东移动可接近煤资源并继续探索东部未知区域，观察相邻丘陵的评分。\",\"expected_effect\":\"拓荒者移动到东侧丘陵(12,5)，移动力减少，并更新当前选址评分。\"}",
+        "prompt_tokens": 17568,
+        "completion_tokens": 3906,
+        "reasoning_tokens": 3838,
+        "latency_s": 26.050913333892822
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0003",
+    "env_step": 4,
+    "turn": 2,
+    "action_submitted": true,
+    "native_action": null,
+    "reason": "拓荒者当前移动力为0，无法移动或建城；先结束回合恢复移动力，下回合再前往可能评分≥6.0的丘陵/资源点建城。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": false,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 0,
+        "after": 3
+      }
+    ],
+    "native_notices": [
+      "Year: 3900 BCE"
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0003-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\": 124, \"reason\": \"拓荒者当前移动力为0，无法移动或建城；先结束回合恢复移动力，下回合再前往可能评分≥6.0的丘陵/资源点建城。\"}",
+        "prompt_tokens": 17138,
+        "completion_tokens": 882,
+        "reasoning_tokens": 829,
+        "latency_s": 5.140394926071167
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0004",
+    "env_step": 5,
+    "turn": 3,
+    "action_submitted": true,
+    "native_action": [
+      "unit",
+      101,
+      "goto_6"
+    ],
+    "reason": "当前选址评分5.2低于目标6.0；向南移动到海岸苔原可纳入更多海洋资源并保留煤炭，观察新位置评分后再决定建城。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 6,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": true,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 12,
+        "y": 6,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_y",
+        "id": "101",
+        "before": 5,
+        "after": 6
+      },
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "native_notices": [],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0004-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":96,\"reason\":\"当前选址评分5.2低于目标6.0；向南移动到海岸苔原可纳入更多海洋资源并保留煤炭，观察新位置评分后再决定建城。\",\"expected_effect\":\"拓荒者移动到(12,6)，显示该位置的新 mini_score。\"}",
+        "prompt_tokens": 18301,
+        "completion_tokens": 7560,
+        "reasoning_tokens": 7494,
+        "latency_s": 46.69662427902222
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0005",
+    "env_step": 6,
+    "turn": 3,
+    "action_submitted": true,
+    "native_action": null,
+    "reason": "拓荒者移动力为0，当前无法移动或建城；先结束回合恢复移动力，下回合再前往评分≥6.0的位置建城。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 6,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 6,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": false,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 6,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 12,
+        "y": 6,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 0,
+        "after": 3
+      }
+    ],
+    "native_notices": [
+      " No action probability query needed.",
+      "Year: 3850 BCE"
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0005-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":124,\"reason\":\"拓荒者移动力为0，当前无法移动或建城；先结束回合恢复移动力，下回合再前往评分≥6.0的位置建城。\",\"expected_effect\":\"拓荒者移动力恢复，可继续探索并选址。\"}",
+        "prompt_tokens": 17444,
+        "completion_tokens": 190,
+        "reasoning_tokens": 127,
+        "latency_s": 1.9076082706451416
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0006",
+    "env_step": 7,
+    "turn": 4,
+    "action_submitted": true,
+    "native_action": [
+      "unit",
+      101,
+      "goto_1"
+    ],
+    "reason": "当前评分5.2低于目标6.0，先向北移动至带煤的丘陵，争取更高资源评分后再建城。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 6,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": true,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 6,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_y",
+        "id": "101",
+        "before": 6,
+        "after": 5
+      },
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "native_notices": [
+      " No action probability query needed."
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0006-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":92,\"reason\":\"当前评分5.2低于目标6.0，先向北移动至带煤的丘陵，争取更高资源评分后再建城。\",\"expected_effect\":\"拓荒者移动到(12,5)丘陵煤矿，观察该处候选评分是否提升。\"}",
+        "prompt_tokens": 18341,
+        "completion_tokens": 575,
+        "reasoning_tokens": 512,
+        "latency_s": 4.865583896636963
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0007",
+    "env_step": 8,
+    "turn": 4,
+    "action_submitted": true,
+    "native_action": null,
+    "reason": "拓荒者移动力为0，当前菜单无移动或建城动作；先结束回合恢复移动力，下回合再向北/东探索寻找评分≥6.0的资源富集点建城。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": false,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 0,
+        "after": 3
+      }
+    ],
+    "native_notices": [
+      "Year: 3800 BCE"
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0007-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\": 124, \"reason\": \"拓荒者移动力为0，当前菜单无移动或建城动作；先结束回合恢复移动力，下回合再向北/东探索寻找评分≥6.0的资源富集点建城。\", \"expected_effect\": \"回合结束，拓荒者移动力恢复为3，可继续探索。\"}",
+        "prompt_tokens": 17541,
+        "completion_tokens": 3363,
+        "reasoning_tokens": 3283,
+        "latency_s": 19.496346950531006
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0008",
+    "env_step": 9,
+    "turn": 5,
+    "action_submitted": true,
+    "native_action": [
+      "unit",
+      101,
+      "goto_3"
+    ],
+    "reason": "向西移动到(11,5)丘陵，靠近海洋且仍能覆盖煤炭资源，争取获得≥6.0的评分后再建城。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 11,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": true,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 11,
+        "y": 5,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_x",
+        "id": "101",
+        "before": 12,
+        "after": 11
+      },
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "native_notices": [],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0008-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":94,\"reason\":\"向西移动到(11,5)丘陵，靠近海洋且仍能覆盖煤炭资源，争取获得≥6.0的评分后再建城。\"}",
+        "prompt_tokens": 18471,
+        "completion_tokens": 4584,
+        "reasoning_tokens": 4544,
+        "latency_s": 28.08949327468872
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0009",
+    "env_step": 10,
+    "turn": 5,
+    "action_submitted": true,
+    "native_action": null,
+    "reason": "拓荒者移动力为0，菜单无移动或建城动作；评分仍为5.2低于6.0，需结束回合恢复移动力，下回合再寻找更富资源点建城。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 11,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 11,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": false,
+    "before_units": {
+      "101": {
+        "x": 11,
+        "y": 5,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 11,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 0,
+        "after": 3
+      }
+    ],
+    "native_notices": [
+      " No action probability query needed.",
+      "Year: 3750 BCE"
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0009-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\": 124, \"reason\": \"拓荒者移动力为0，菜单无移动或建城动作；评分仍为5.2低于6.0，需结束回合恢复移动力，下回合再寻找更富资源点建城。\"}",
+        "prompt_tokens": 17610,
+        "completion_tokens": 818,
+        "reasoning_tokens": 760,
+        "latency_s": 5.4688942432403564
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0010",
+    "env_step": 11,
+    "turn": 6,
+    "action_submitted": true,
+    "native_action": [
+      "unit",
+      101,
+      "goto_2"
+    ],
+    "reason": "当前评分5.2低于目标6.0；向东北冻土移动仅耗1移动力，便于本回合继续向北/东探索资源更丰富的地点。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 11,
+      "y": 5,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 4,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": true,
+    "before_units": {
+      "101": {
+        "x": 11,
+        "y": 5,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 12,
+        "y": 4,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_x",
+        "id": "101",
+        "before": 11,
+        "after": 12
+      },
+      {
+        "type": "unit_y",
+        "id": "101",
+        "before": 5,
+        "after": 4
+      },
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "native_notices": [],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0010-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\": 93, \"reason\": \"当前评分5.2低于目标6.0；向东北冻土移动仅耗1移动力，便于本回合继续向北/东探索资源更丰富的地点。\", \"expected_effect\": \"拓荒者移动到(12,4)并保留移动力，揭示更多周边地形。\"}",
+        "prompt_tokens": 18498,
+        "completion_tokens": 5485,
+        "reasoning_tokens": 5411,
+        "latency_s": 34.521130323410034
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0011",
+    "env_step": 12,
+    "turn": 6,
+    "action_submitted": true,
+    "native_action": null,
+    "reason": "拓荒者移动力为0，当前菜单无移动或建城动作；先结束回合恢复移动力，下回合再向东/北探索并寻找评分≥6.0的资源富集点建城。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 4,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 4,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": false,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 4,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 12,
+        "y": 4,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 0,
+        "after": 3
+      }
+    ],
+    "native_notices": [
+      " No action probability query needed.",
+      "Year: 3700 BCE"
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0011-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\": 124, \"reason\": \"拓荒者移动力为0，当前菜单无移动或建城动作；先结束回合恢复移动力，下回合再向东/北探索并寻找评分≥6.0的资源富集点建城。\", \"expected_effect\": \"回合结束，settler移动力恢复为3。\"}",
+        "prompt_tokens": 17727,
+        "completion_tokens": 3562,
+        "reasoning_tokens": 3486,
+        "latency_s": 21.816245079040527
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0012",
+    "env_step": 13,
+    "turn": 7,
+    "action_submitted": true,
+    "native_action": [
+      "unit",
+      101,
+      "goto_2"
+    ],
+    "reason": "当前评分5.2低于目标，向东北冻土移动以探查更多东侧山地与北部未知地形，寻找资源更丰富且评分≥6.0的建城点。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 12,
+      "y": 4,
+      "mini_score": 5.2,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 13,
+      "y": 3,
+      "mini_score": 3.6,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": true,
+    "before_units": {
+      "101": {
+        "x": 12,
+        "y": 4,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 13,
+        "y": 3,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_x",
+        "id": "101",
+        "before": 12,
+        "after": 13
+      },
+      {
+        "type": "unit_y",
+        "id": "101",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 3,
+        "after": 0
+      }
+    ],
+    "native_notices": [],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0012-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":92,\"reason\":\"当前评分5.2低于目标，向东北冻土移动以探查更多东侧山地与北部未知地形，寻找资源更丰富且评分≥6.0的建城点。\",\"expected_effect\":\"拓荒者移动到(13,3)，揭示东北方向更多地块与潜在资源。\"}",
+        "prompt_tokens": 18696,
+        "completion_tokens": 4887,
+        "reasoning_tokens": 4815,
+        "latency_s": 29.36894655227661
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0013",
+    "env_step": 14,
+    "turn": 7,
+    "action_submitted": true,
+    "native_action": null,
+    "reason": "拓荒者移动力为0，当前无移动/建城动作；先结束回合恢复移动力，下回合再探索高资源点。",
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 13,
+      "y": 3,
+      "mini_score": 3.6,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 13,
+      "y": 3,
+      "mini_score": 3.6,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "legal_build_city": false,
+    "before_units": {
+      "101": {
+        "x": 13,
+        "y": 3,
+        "moves_left": 0,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": {
+      "101": {
+        "x": 13,
+        "y": 3,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "before_cities": {},
+    "after_cities": {},
+    "state_changes": [
+      {
+        "type": "unit_moves_left",
+        "id": "101",
+        "before": 0,
+        "after": 3
+      }
+    ],
+    "native_notices": [
+      " No action probability query needed.",
+      "Year: 3650 BCE"
+    ],
+    "output_errors": null,
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0013-call0",
+        "purpose": "decision",
+        "finish_reason": "stop",
+        "content": "{\"action_id\":124,\"reason\":\"拓荒者移动力为0，当前无移动/建城动作；先结束回合恢复移动力，下回合再探索高资源点。\",\"expected_effect\":\"回合推进，拓荒者移动力恢复为3。\"}",
+        "prompt_tokens": 18367,
+        "completion_tokens": 629,
+        "reasoning_tokens": 571,
+        "latency_s": 4.299682855606079
+      }
+    ]
+  },
+  {
+    "decision_id": "development_build_city-normal-254-attempt0-decision0014",
+    "env_step": null,
+    "turn": 8,
+    "action_submitted": false,
+    "native_action": null,
+    "reason": null,
+    "before_metrics": {
+      "status": 0,
+      "success": -1,
+      "x": 13,
+      "y": 3,
+      "mini_score": 3.6,
+      "mini_goal": 6.0,
+      "is_mini_success": -1,
+      "max_turn": 30
+    },
+    "after_metrics": null,
+    "legal_build_city": true,
+    "before_units": {
+      "101": {
+        "x": 13,
+        "y": 3,
+        "moves_left": 3,
+        "health": 20,
+        "transported": false,
+        "transported_by": 0,
+        "occupied": false
+      }
+    },
+    "after_units": null,
+    "before_cities": {},
+    "after_cities": null,
+    "state_changes": null,
+    "native_notices": [],
+    "output_errors": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0014-call0",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0014-call1",
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    ],
+    "calls": [
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0014-call0",
+        "purpose": "decision",
+        "finish_reason": "length",
+        "content": "",
+        "prompt_tokens": 19327,
+        "completion_tokens": 8192,
+        "reasoning_tokens": 8192,
+        "latency_s": 49.69280505180359
+      },
+      {
+        "call_id": "development_build_city-normal-254-attempt0-decision0014-call1",
+        "purpose": "correction",
+        "finish_reason": "length",
+        "content": "",
+        "prompt_tokens": 19359,
+        "completion_tokens": 8192,
+        "reasoning_tokens": 8192,
+        "latency_s": 49.06472039222717
+      }
+    ]
+  }
+]

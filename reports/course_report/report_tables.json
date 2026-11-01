@@ -1,0 +1,283 @@
+{
+  "run_id": "development-baseline-v5-20261101",
+  "task_summary": [
+    {
+      "task_type": "development_build_city",
+      "planned": 100,
+      "started": 100,
+      "policy_result_scenes": 100,
+      "native_finished": 81,
+      "successes": 80,
+      "success_rate": 0.8,
+      "native_success": 80,
+      "output_failure": 19,
+      "native_failure": 1,
+      "env_steps_total": 1012,
+      "api_calls_policy_results": 1156,
+      "cost_usd_known_all_attempts": 4.173008477999999,
+      "unknown_cost_calls_all_attempts": 0,
+      "wilson95_lower": 0.7111708344068411,
+      "wilson95_upper": 0.8666330666689676,
+      "env_steps_median": 7.0,
+      "env_steps_min": 0,
+      "env_steps_max": 56,
+      "api_calls_total_median": 7.0,
+      "api_calls_total_min": 1,
+      "api_calls_total_max": 66,
+      "duration_s_median": 109.46865600347519,
+      "duration_s_min": 2.283320052549243,
+      "duration_s_max": 1371.375992950052
+    },
+    {
+      "task_type": "development_transport",
+      "planned": 100,
+      "started": 100,
+      "policy_result_scenes": 100,
+      "native_finished": 45,
+      "successes": 37,
+      "success_rate": 0.37,
+      "output_failure": 55,
+      "native_success": 37,
+      "native_failure": 8,
+      "env_steps_total": 1139,
+      "api_calls_policy_results": 1570,
+      "cost_usd_known_all_attempts": 6.271869701999999,
+      "unknown_cost_calls_all_attempts": 0,
+      "wilson95_lower": 0.28182360534324524,
+      "wilson95_upper": 0.4677947041905709,
+      "env_steps_median": 9.0,
+      "env_steps_min": 0,
+      "env_steps_max": 37,
+      "api_calls_total_median": 12.0,
+      "api_calls_total_min": 2,
+      "api_calls_total_max": 59,
+      "duration_s_median": 294.47763067670166,
+      "duration_s_min": 31.216345459222794,
+      "duration_s_max": 2018.0294435117394
+    }
+  ],
+  "resources_by_outcome": [
+    {
+      "task_type": "development_build_city",
+      "outcome": "native_success",
+      "n": 80,
+      "env_steps": {
+        "median": 6.0,
+        "q25": 2.5,
+        "q75": 11.5,
+        "min": 1.0,
+        "max": 51.0,
+        "mean": 8.925,
+        "sum": 714.0
+      },
+      "api_calls_total": {
+        "median": 7.0,
+        "q25": 2.5,
+        "q75": 12.25,
+        "min": 1.0,
+        "max": 58.0,
+        "mean": 9.7625,
+        "sum": 781.0
+      },
+      "duration_s": {
+        "median": 69.79888731986284,
+        "q25": 12.64995338441804,
+        "q75": 199.08143544988707,
+        "min": 2.283320052549243,
+        "max": 1018.5707167461514,
+        "mean": 145.5669431270566,
+        "sum": 11645.355450164527
+      }
+    },
+    {
+      "task_type": "development_build_city",
+      "outcome": "native_failure",
+      "n": 1,
+      "env_steps": {
+        "median": 56.0,
+        "q25": 56.0,
+        "q75": 56.0,
+        "min": 56.0,
+        "max": 56.0,
+        "mean": 56.0,
+        "sum": 56.0
+      },
+      "api_calls_total": {
+        "median": 66.0,
+        "q25": 66.0,
+        "q75": 66.0,
+        "min": 66.0,
+        "max": 66.0,
+        "mean": 66.0,
+        "sum": 66.0
+      },
+      "duration_s": {
+        "median": 1371.375992950052,
+        "q25": 1371.375992950052,
+        "q75": 1371.375992950052,
+        "min": 1371.375992950052,
+        "max": 1371.375992950052,
+        "mean": 1371.375992950052,
+        "sum": 1371.375992950052
+      }
+    },
+    {
+      "task_type": "development_build_city",
+      "outcome": "output_failure",
+      "n": 19,
+      "env_steps": {
+        "median": 14.0,
+        "q25": 4.0,
+        "q75": 20.0,
+        "min": 0.0,
+        "max": 26.0,
+        "mean": 12.736842105263158,
+        "sum": 242.0
+      },
+      "api_calls_total": {
+        "median": 16.0,
+        "q25": 6.5,
+        "q75": 24.0,
+        "min": 2.0,
+        "max": 32.0,
+        "mean": 16.263157894736842,
+        "sum": 309.0
+      },
+      "duration_s": {
+        "median": 336.53190975263715,
+        "q25": 181.95822366327047,
+        "q75": 441.15303670428693,
+        "min": 93.15988644212484,
+        "max": 755.1539930179715,
+        "mean": 343.1328318806267,
+        "sum": 6519.5238057319075
+      }
+    },
+    {
+      "task_type": "development_transport",
+      "outcome": "native_success",
+      "n": 37,
+      "env_steps": {
+        "median": 8.0,
+        "q25": 6.0,
+        "q75": 10.0,
+        "min": 6.0,
+        "max": 16.0,
+        "mean": 8.756756756756756,
+        "sum": 324.0
+      },
+      "api_calls_total": {
+        "median": 9.0,
+        "q25": 6.0,
+        "q75": 12.0,
+        "min": 6.0,
+        "max": 17.0,
+        "mean": 9.54054054054054,
+        "sum": 353.0
+      },
+      "duration_s": {
+        "median": 115.92028524912894,
+        "q25": 79.23507242091,
+        "q75": 188.6598031371832,
+        "min": 31.216345459222794,
+        "max": 308.5168018043041,
+        "mean": 141.15880101979585,
+        "sum": 5222.875637732446
+      }
+    },
+    {
+      "task_type": "development_transport",
+      "outcome": "native_failure",
+      "n": 8,
+      "env_steps": {
+        "median": 25.0,
+        "q25": 18.0,
+        "q75": 26.5,
+        "min": 16.0,
+        "max": 37.0,
+        "mean": 24.125,
+        "sum": 193.0
+      },
+      "api_calls_total": {
+        "median": 35.5,
+        "q25": 26.0,
+        "q75": 37.25,
+        "min": 22.0,
+        "max": 59.0,
+        "mean": 34.625,
+        "sum": 277.0
+      },
+      "duration_s": {
+        "median": 982.8792519792914,
+        "q25": 758.5074654906057,
+        "q75": 1208.4784309766255,
+        "min": 540.294388404116,
+        "max": 1876.1538993362337,
+        "mean": 1035.715028977953,
+        "sum": 8285.720231823623
+      }
+    },
+    {
+      "task_type": "development_transport",
+      "outcome": "output_failure",
+      "n": 55,
+      "env_steps": {
+        "median": 10.0,
+        "q25": 7.0,
+        "q75": 15.0,
+        "min": 0.0,
+        "max": 36.0,
+        "mean": 11.309090909090909,
+        "sum": 622.0
+      },
+      "api_calls_total": {
+        "median": 15.0,
+        "q25": 10.0,
+        "q75": 21.0,
+        "min": 2.0,
+        "max": 57.0,
+        "mean": 17.09090909090909,
+        "sum": 940.0
+      },
+      "duration_s": {
+        "median": 391.44691705331206,
+        "q25": 278.94731342978776,
+        "q75": 643.3830782938749,
+        "min": 106.03724344447255,
+        "max": 2018.0294435117394,
+        "mean": 501.8792237767442,
+        "sum": 27603.35730772093
+      }
+    }
+  ],
+  "runtime_by_task": [
+    {
+      "task_type": "development_build_city",
+      "n": 100,
+      "unit": "seconds",
+      "mean": 195.36255248846487,
+      "median": 109.46865600347519,
+      "q25": 32.88686206517741,
+      "q75": 317.00519396038726,
+      "p90": 497.1227119745689,
+      "max": 1371.375992950052
+    },
+    {
+      "task_type": "development_transport",
+      "n": 100,
+      "unit": "seconds",
+      "mean": 411.11953177276996,
+      "median": 294.47763067670166,
+      "q25": 155.6615838673897,
+      "q75": 530.9835671279579,
+      "p90": 816.8362624621028,
+      "max": 2018.0294435117394
+    }
+  ],
+  "decision_counts": {
+    "decisions": 2225,
+    "api_calls": 2726,
+    "correction_decisions": 501,
+    "recovered_decisions": 427
+  }
+}

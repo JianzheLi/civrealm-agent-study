@@ -1,0 +1,120 @@
+{
+  "run_id": "development-baseline-v5-20261101",
+  "selection_basis": "Include every native failure, representative output failures, and contrasting successful trajectories. Selection is for qualitative diagnosis, not a new performance sample.",
+  "cases": [
+    {
+      "task_type": "development_build_city",
+      "instance_id": 349,
+      "role": "原生失败",
+      "reason": "唯一建城原生失败：反复探索、误把工程增产当评分提高，最后低于目标建城。"
+    },
+    {
+      "task_type": "development_build_city",
+      "instance_id": 254,
+      "role": "输出失败",
+      "reason": "探索过程中普通与纠错输出连续为空，原生游戏尚未结束。"
+    },
+    {
+      "task_type": "development_build_city",
+      "instance_id": 666,
+      "role": "输出失败",
+      "reason": "零环境动作即停止，隔离展示输出问题不能被归因于错误游戏操作。"
+    },
+    {
+      "task_type": "development_build_city",
+      "instance_id": 93,
+      "role": "成功参照",
+      "reason": "达到目标后因移动力为零合法等待，再就地建城；避免将合理等待误标为拖延。"
+    },
+    {
+      "task_type": "development_build_city",
+      "instance_id": 948,
+      "role": "成功参照",
+      "reason": "51次动作、58次调用后仍成功，包含截断JSON后的纠错恢复；与349的长轨迹失败对照。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 976,
+      "role": "输出失败",
+      "reason": "已装载和载运，粮荒损失移民后的恢复阶段又发生连续空输出。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 351,
+      "role": "原生失败",
+      "reason": "粮荒损失两名移民，购买生产后仍受城市人口前提限制，明确反馈后继续等待至到期。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 386,
+      "role": "原生失败",
+      "reason": "已登陆的移民在建城前损失，后续重新生产受人口限制，保留全部原生失败之一。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 197,
+      "role": "原生失败",
+      "reason": "跨海调用最多的失败：37次动作、59次调用，多次登陆仍未建城，展示高开销恢复过程。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 606,
+      "role": "原生失败",
+      "reason": "曾登陆，但后续关键单位损失并到期；与从未登陆的失败区别阅读。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 650,
+      "role": "原生失败",
+      "reason": "登陆、粮荒损失、重建与人口条件相互制约，保留全部原生失败之一。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 689,
+      "role": "原生失败",
+      "reason": "两次登陆和多次粮荒损失后，重建受人口限制而失败，保留完整恢复过程。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 75,
+      "role": "原生失败",
+      "reason": "两次登陆但都未完成建城，展示登陆不等于任务完成。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 859,
+      "role": "原生失败",
+      "reason": "没有完成登陆，移民损失后重建受人口限制；本正式版本原生胜负已知。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 631,
+      "role": "成功参照",
+      "reason": "同船载运两名移民，粮荒后仍有幸存者在登陆地建城；包含完整同一单位证据链。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 424,
+      "role": "成功参照",
+      "reason": "初始粮食盈余为零、没有粮荒损失的短成功轨迹，且成功纠正一次截断JSON；展示场景条件差异。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 329,
+      "role": "动作语义/初始条件",
+      "reason": "初始无运输船；前两次把plant误认为建城，随后移民损失，最后输出失败。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 665,
+      "role": "协议异常后成功",
+      "reason": "一次finish_reason=stop的最终输出包含多段JSON及额外文本，严格解析失败，纠错后继续并原生成功。"
+    },
+    {
+      "task_type": "development_transport",
+      "instance_id": 999,
+      "role": "未触顶空响应",
+      "reason": "一次finish_reason=stop、5533个思考tokens即返回空内容，纠错后继续，后来才因连续触顶空输出停止；区别两种空响应。"
+    }
+  ]
+}

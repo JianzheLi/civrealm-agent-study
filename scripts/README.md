@@ -1,5 +1,7 @@
-# 可复现入口（待实现）
+# 部署与运行入口
 
-这里后续提供环境准备、统一模型与基础配置的批量采集、第一轮逐局汇总、失败案例导出、统计图和案例回放入口。脚本应读取 configs/ 中的配置，不在命令里塞入大量未记录的实验设置。
+sync.py push 上传当前源码并准备独立 SDK；sync.py pull 仅下载精简报告。env.sh 配置服务器 CPU 运行环境。launch_remote.py 读取环境密钥或隐藏输入，经 SSH stdin 交给 receive_launch.py 启动监督进程。bootstrap_remote.py 只修改本项目 SDK。运行步骤见 ../docs/development_run.md。
 
-当前仓库尚未实现这些入口，因此暂不提供看似可以执行的安装或实验命令。具体运行依赖随环境适配确定，版本由真实安装记录产生。
+prepare_failure_review.py 在服务器读取已完成的200局，生成进一步诊断和selected_cases.json指定的逐步页面，不发起模型请求。本地 download_review_cases.py 下载精选完整原始记录与视频至 runs/local_review/，核对文件数/字节数后生成离线浏览目录。说明见 ../reports/failure_diagnosis/README.md。
+
+analyze_common_failure_patterns.py 在服务器只读正式100局跨海轨迹，统计关键移民损失、登陆后损失、恢复操作与人口提示时序；生成 reports/failure_diagnosis/common_failure_patterns.csv/json。不调用模型。共性分析正文见 ../reports/course_report/失败共性分析.md。

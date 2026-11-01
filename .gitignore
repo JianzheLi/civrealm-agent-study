@@ -16,6 +16,8 @@ cache/
 runtime/
 third_party/
 runs/
+# Superseded experiment reports stay on the server/local disk.
+/reports/archive/
 artifacts/
 tmp/
 *.log

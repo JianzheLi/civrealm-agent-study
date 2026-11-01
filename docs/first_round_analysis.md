@@ -15,7 +15,7 @@ jianzheli 负责两个发展任务，songluo 负责两个战斗任务，beibeide
 | 案例索引与说明 | 代表性失败和成功参照，可定位原始轨迹、关键帧与事件 |
 | 图表与回放 | 统一口径的总体图、任务图和案例可视化 |
 
-建议材料名为 episode_results.csv、task_summary.csv、failure_annotations.csv、case_index.csv；这些名称用于后续交付约定，当前文件尚未生成。精简结果、说明和静态图放在 reports/，完整轨迹与视频留在服务器。
+材料名为 episode_results.csv、task_summary.csv、failure_annotations.csv、case_index.csv。两个发展任务已由真实运行生成各100局的完整首轮材料，位于 reports/development/，实际覆盖和是否完成以 summary.json 为准；其余任务尚待对应成员交付。完整轨迹与玩家可见状态回放视频留在服务器，video_index.csv提供逐局路径。
 
 ## 2. 先汇总，再读案例
 
@@ -24,6 +24,7 @@ jianzheli 负责两个发展任务，songluo 负责两个战斗任务，beibeide
 逐局表保留原生状态和运行停止原因，按场景汇总：
 
 - 原生成功与原生失败。
+- SDK 原生终止但小游戏胜负仍未知，单列 native_terminal_unknown。
 - 输出/执行失败。
 - 2,000 步宽停止线截断与其他中断。
 - 基础设施异常与未运行。

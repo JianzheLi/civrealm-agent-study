@@ -1,0 +1,85 @@
+Source: freeciv-web container, /var/lib/tomcat10/webapps/data/savegames/minitask/minitask_T1_task_development_build_city_level_normal_id_349.sav
+Researcher-side source excerpt. Hidden map_conf values are omitted; they were not model input.
+map_conf reference lines: [110, 142, 216]
+
+104: function get_build_city_msg(turn)
+105:     -- get metrics
+106:     player = find.player(0)
+107:     metrics = '[{'
+108:     for city in player:cities_iterate() do
+109:         tile = city.tile
+110:         score = map_conf[math.floor(tile.y+1)][math.floor(tile.x+1)]
+111:         city_id = math.floor(city.id)
+112:         is_mini_success = 0
+113:         if score >= score_goal - 0.0001 then
+114:             is_mini_success = 1
+115:         end
+116:         metrics = concat(metrics, 'city_id', city_id, true)
+117:         metrics = concat(metrics, 'x', math.floor(tile.x), true)
+118:         metrics = concat(metrics, 'y', math.floor(tile.y), true)
+119:         metrics = concat(metrics, 'mini_score', score, true)
+120:         metrics = concat(metrics, 'mini_goal', score_goal, true)
+121:         metrics = concat(metrics, 'max_turn', max_turn, true)
+122:         metrics = concat(metrics, 'is_mini_success', is_mini_success, false)
+123:     end
+124:     -- no city built
+125:     if is_mini_success == -1 then
+126:         metrics = concat(metrics, 'city_id', -1, true)
+127:         metrics = concat(metrics, 'mini_score', 0, true)
+128:         metrics = concat(metrics, 'mini_goal', score_goal, true)
+129:         metrics = concat(metrics, 'max_turn', max_turn, true)
+130:         metrics = concat(metrics, 'is_mini_success', 0, false)
+131:     end
+132:     metrics = metrics .. '}]'
+133:     return metrics
+134: end
+135: 
+136: function get_unit_reward(turn)
+137:     -- get metrics
+138:     player = find.player(0)
+139:     metrics = '[{'
+140:     for unit in player:units_iterate() do
+141:         tile = unit.tile
+142:         turn_score = map_conf[math.floor(tile.y+1)][math.floor(tile.x+1)]
+143:         metrics = concat(metrics, 'x', math.floor(tile.x), true)
+144:         metrics = concat(metrics, 'y', math.floor(tile.y), true)
+145:         metrics = concat(metrics, 'mini_score', turn_score, true)
+146:         metrics = concat(metrics, 'mini_goal', score_goal, true)
+147:         metrics = concat(metrics, 'is_mini_success', is_mini_success, true)
+148:         metrics = concat(metrics, 'max_turn', max_turn, false)
+149:     end
+150:     metrics = metrics .. '}]'
+151:     return metrics
+152: end
+153: 
+154: function msg_success_or_failed()
+184: function city_built_callback(city)
+185:   if city.owner:is_human() then
+186:     json_msg = minitask_msg_handle(game.current_turn())
+187:     doc_msg = msg_success_or_failed()
+188:     notify.event(nil, nil, E.SCRIPT, _(json_msg))
+189:     notify.event(nil, nil, E.SCRIPT, _(doc_msg))
+190:   end
+191: end
+192: 
+193: function pulse_start_msg()
+194:     unit_moved_callback(nil, nil, nil)
+195:     notify.event(nil, nil, E.SCRIPT, _(start_msg))
+196:     signal.remove('pulse', 'pulse_start_msg')
+197: end
+198: 
+199: function game_started_udf_callback(player)
+200:     unit_moved_callback(nil, nil, nil)
+201:     notify.event(nil, nil, E.SCRIPT, _(start_msg))
+202: end
+203: 
+204: function game_ended_udf_callback(player)
+205:   if is_mini_success > -1 then
+206:     return
+207:   end
+208:   is_mini_success = 0
+209:   json_msg = minitask_msg_handle(game.current_turn())
+210:   doc_msg = msg_success_or_failed()
+211:   notify.event(nil, nil, E.SCRIPT, _(json_msg))
+212:   notify.event(nil, nil, E.SCRIPT, _(doc_msg))
+213: end
