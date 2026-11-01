@@ -2,6 +2,8 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
+import yaml
+
 from civrealm_agent_study.config import ConfigError, load_config_bundle, validate_config_bundle
 from civrealm_agent_study.env import next_actor_context, ordered_legal_actions
 from civrealm_agent_study.trace import EpisodeTrace
@@ -14,13 +16,23 @@ class ConfigTests(unittest.TestCase):
     def test_repository_config_is_valid(self):
         bundle = load_config_bundle(REPO_ROOT)
         self.assertEqual(bundle["local"]["member"], "songluo")
-        self.assertEqual(len(bundle["instances"]["tasks"]), 2)
+        self.assertEqual(list(bundle["instances"]["tasks"]), ["battle_defend_city"])
         self.assertEqual(len(bundle["sha256"]["shared"]), 64)
+
+    def test_member_selects_matching_instance_manifest(self):
+        with TemporaryDirectory() as temporary_directory:
+            local = load_config_bundle(REPO_ROOT)["local"]
+            local["member"] = "junhaozhang"
+            local_path = Path(temporary_directory, "local.yaml")
+            local_path.write_text(yaml.safe_dump(local), encoding="utf-8")
+            bundle = load_config_bundle(REPO_ROOT, local_path=local_path)
+            self.assertEqual(bundle["instances"]["owner"], "junhaozhang")
+            self.assertEqual(list(bundle["instances"]["tasks"]), ["battle_ancient_era"])
 
     def test_duplicate_instance_id_is_rejected(self):
         bundle = load_config_bundle(REPO_ROOT)
         instances = bundle["instances"]
-        selected = instances["tasks"]["battle_ancient_era"]["selected_ids"]
+        selected = instances["tasks"]["battle_defend_city"]["selected_ids"]
         selected[-1] = selected[0]
         with self.assertRaisesRegex(ConfigError, "duplicate"):
             validate_config_bundle(bundle["shared"], bundle["local"], instances)

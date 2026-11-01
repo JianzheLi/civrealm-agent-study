@@ -1,6 +1,6 @@
 # 小组协作方式
 
-当前共同完成第一轮轨迹统计、失败案例与可视化。jianzheli 负责两个发展任务，songluo 负责两个战斗任务，beibeideng 负责外交；每任务 100 局，具体任务见主 README 文末分工。
+当前共同完成第一轮轨迹统计、失败案例与可视化。jianzheli 负责两个发展任务，junhaozhang 负责古代陆战，songluo 负责守城，beibeideng 负责外交；每任务 100 局，具体任务见主 README 文末分工。
 
 采集前全组共享同一份基础 Agent、最新 DeepSeek 模型版本、生成设置和字段。当前参考版本为 DeepSeek-V4.1-Flash-1017（API deepseek-flash）；实际开始时统一核对并记录，不按成员分别选择模型。问题标签和图表分母对齐后再汇总。
 

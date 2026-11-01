@@ -79,8 +79,8 @@ class RunnerTests(unittest.TestCase):
                 run_episode(
                     bundle,
                     REPO_ROOT,
-                    "battle_ancient_era",
-                    143,
+                    "battle_defend_city",
+                    669,
                     max_env_steps=0,
                     agent=FakeAgent(),
                     session_factory=FakeSession,
@@ -94,8 +94,8 @@ class RunnerTests(unittest.TestCase):
             result = run_episode(
                 bundle,
                 REPO_ROOT,
-                "battle_ancient_era",
-                143,
+                "battle_defend_city",
+                669,
                 agent=FakeAgent(),
                 session_factory=FakeSession,
                 batch_id="batch-test",
@@ -118,8 +118,8 @@ class RunnerTests(unittest.TestCase):
             result = run_episode(
                 bundle,
                 REPO_ROOT,
-                "battle_ancient_era",
-                143,
+                "battle_defend_city",
+                669,
                 max_game_turns=1,
                 agent=FakeAgent(),
                 session_factory=FakeUnresolvedSession,

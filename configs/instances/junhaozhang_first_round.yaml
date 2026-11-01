@@ -1,0 +1,23 @@
+schema_version: 1
+
+manifest_id: junhaozhang-first-round-v1
+owner: junhaozhang
+difficulty: normal
+candidate_ids:
+  min: 0
+  max: 999
+sampling:
+  algorithm: python_random_v1_sample_without_replacement
+  candidate_order: ascending_integer
+  list_is_authoritative: true
+  run_order_equals_selected_order: true
+  first_n_for_pipeline_validation: 5
+  validation_instances_count_toward_100: true
+
+tasks:
+  battle_ancient_era:
+    selection_seed: 2026110101
+    previously_inspected_ids: [0, 1, 999]
+    exclude_from_future_independent_test: [0, 1, 999]
+    pipeline_validation_ids: [143, 720, 408, 0, 822]
+    selected_ids: [143, 720, 408, 0, 822, 916, 94, 859, 894, 315, 649, 770, 63, 881, 551, 641, 480, 104, 186, 48, 639, 801, 367, 79, 510, 949, 32, 407, 624, 122, 432, 740, 40, 938, 102, 271, 183, 731, 765, 923, 405, 572, 377, 369, 714, 768, 354, 617, 906, 107, 501, 344, 364, 867, 70, 954, 317, 45, 394, 329, 256, 913, 684, 30, 966, 744, 748, 191, 388, 514, 828, 92, 808, 469, 44, 240, 546, 438, 477, 192, 453, 51, 645, 920, 140, 633, 47, 805, 742, 926, 172, 591, 754, 80, 729, 722, 910, 705, 34, 882]

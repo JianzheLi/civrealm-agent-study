@@ -4,7 +4,7 @@
 
 全组统一使用首轮开始时最新发布的 DeepSeek，2026-11-01 核对为 DeepSeek-V4.1-Flash-1017，API model=deepseek-flash。保存官方参考版本、核对日期、请求别名、实际返回模型、thinking/high、生成上限及基础提示词版本，不能各组使用不同模型后混合结果。
 
-配置同时确定任务规则来源、代码版本、历史与记忆、纠错/重试规则、100 个实例的清单和抽样种子、可控游戏随机设置、运行顺序与输出位置。songluo 的两个战斗任务清单见 [instances/songluo_first_round.yaml](instances/songluo_first_round.yaml)。原生终局优先，宽松停止线为每局 2,000 环境动作，不设独立 API 调用次数上限（max_api_calls 的语义为 null）。
+配置同时确定任务规则来源、代码版本、历史与记忆、纠错/重试规则、100 个实例的清单和抽样种子、可控游戏随机设置、运行顺序与输出位置。古代陆战清单见 [instances/junhaozhang_first_round.yaml](instances/junhaozhang_first_round.yaml)，守城清单见 [instances/songluo_first_round.yaml](instances/songluo_first_round.yaml)。加载器根据个人 `local.yaml` 的 `member` 自动选择同名清单。原生终局优先，宽松停止线为每局 2,000 环境动作，不设独立 API 调用次数上限（max_api_calls 的语义为 null）。
 
 先用每任务清单顺序中的前 5 个场景确认链路、日志和可视化字段，随后使用冻结后的配置采集。若验证期间修改基础配置，受影响场景按新版本重采并保留旧 attempt。每位成员交付自己任务类别的结果表、轨迹索引、案例和图；具体分工见根目录 README。
 

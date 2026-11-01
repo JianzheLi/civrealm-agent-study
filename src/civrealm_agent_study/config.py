@@ -90,15 +90,27 @@ def load_config_bundle(
     instances_path: Path | None = None,
 ) -> dict[str, Any]:
     repo_root = repo_root.resolve()
+    shared_file = (shared_path or repo_root / "configs" / "first_round.yaml").resolve()
+    local_file = (local_path or repo_root / "configs" / "local.yaml").resolve()
+    shared = load_yaml(shared_file)
+    local = load_yaml(local_file)
+    member = local.get("member")
+    if not isinstance(member, str) or not member.strip():
+        raise ConfigError("local.member must be a non-empty string")
+    instances_file = (
+        instances_path
+        or repo_root / "configs" / "instances" / f"{member}_first_round.yaml"
+    ).resolve()
     paths = {
-        "shared": (shared_path or repo_root / "configs" / "first_round.yaml").resolve(),
-        "local": (local_path or repo_root / "configs" / "local.yaml").resolve(),
-        "instances": (
-            instances_path
-            or repo_root / "configs" / "instances" / "songluo_first_round.yaml"
-        ).resolve(),
+        "shared": shared_file,
+        "local": local_file,
+        "instances": instances_file,
     }
-    bundle = {name: load_yaml(path) for name, path in paths.items()}
+    bundle = {
+        "shared": shared,
+        "local": local,
+        "instances": load_yaml(instances_file),
+    }
     validate_config_bundle(bundle["shared"], bundle["local"], bundle["instances"])
     bundle["paths"] = {name: str(path) for name, path in paths.items()}
     bundle["sha256"] = {name: sha256_file(path) for name, path in paths.items()}

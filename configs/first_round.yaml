@@ -16,7 +16,7 @@ tasks:
   development_transport:
     owner: jianzheli
   battle_ancient_era:
-    owner: songluo
+    owner: junhaozhang
     task_spec: docs/tasks/battle_ancient_era.md
   battle_defend_city:
     owner: songluo

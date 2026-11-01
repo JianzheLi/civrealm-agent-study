@@ -176,7 +176,8 @@ flowchart TD
 | 成员 | 类别 | 负责的任务 | 第一轮局数 |
 | --- | --- | --- | ---: |
 | jianzheli | 发展 | 建城 `development_build_city`；跨海建城 `development_transport` | 200，两个任务各 100 |
-| songluo | 战斗 | 古代陆战 `battle_ancient_era`；守城 `battle_defend_city` | 200，两个任务各 100 |
+| junhaozhang | 战斗 | 古代陆战 `battle_ancient_era` | 100 |
+| songluo | 战斗 | 守城 `battle_defend_city` | 100 |
 | beibeideng | 外交 | 科技交易 `diplomacy_trade_tech` | 100 |
 
 每人交付对应任务的结果表、轨迹索引、问题标签、代表案例与可视化；全组共同对齐标签定义和汇总图，再讨论后续改进方向。

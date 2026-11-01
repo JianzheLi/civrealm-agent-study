@@ -47,7 +47,7 @@ class BatchTests(unittest.TestCase):
             status = run_batch(
                 bundle,
                 REPO_ROOT,
-                "battle_ancient_era",
+                "battle_defend_city",
                 limit=2,
                 episode_runner=fake_runner,
             )
@@ -57,7 +57,7 @@ class BatchTests(unittest.TestCase):
             resumed = run_batch(
                 bundle,
                 REPO_ROOT,
-                "battle_ancient_era",
+                "battle_defend_city",
                 resume_batch_id=status["batch_id"],
                 episode_runner=fake_runner,
             )

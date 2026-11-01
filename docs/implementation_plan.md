@@ -16,7 +16,8 @@ civrealm-agent-study/
 │   ├── local.example.yaml                 # 已有：本机连接与版本模板
 │   ├── local.yaml                         # 本机文件，Git 忽略
 │   └── instances/
-│       └── songluo_first_round.yaml       # 已有：两个战斗任务的 100 局清单
+│       ├── junhaozhang_first_round.yaml   # 已有：古代陆战的 100 局清单
+│       └── songluo_first_round.yaml       # 已有：守城的 100 局清单
 ├── prompts/
 │   ├── README.md
 │   ├── baseline.md                        # 已有：统一基础提示词
@@ -74,7 +75,7 @@ civrealm-agent-study/
 
 `configs/local.yaml` 保存本机路径、连接方式和环境指纹，并由 Git 忽略。它不能保存 API Key，只保存环境变量名称。runner 在每次运行开始时将解析后的非秘密字段复制到 `manifest.json`，所以原始结果仍能追溯本机环境。
 
-`configs/instances/songluo_first_round.yaml` 的显式列表是运行依据，seed 只是来源记录。每个任务列表的前 5 个实例用于链路与日志确认，也计入该任务 100 局；若验证期间改变基础配置，受影响实例使用冻结后的版本重采集，旧 attempt 保留。
+`configs/instances/<member>_first_round.yaml` 的显式列表是运行依据，seed 只是来源记录；加载器按 `local.member` 选择清单。每个任务列表的前 5 个实例用于链路与日志确认，也计入该任务 100 局；若验证期间改变基础配置，受影响实例使用冻结后的版本重采集，旧 attempt 保留。
 
 ## 3. 计划模块的功能
 
